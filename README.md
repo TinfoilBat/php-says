@@ -3,6 +3,8 @@ A "Simon Says" type of game for class practice.
 
 Displays different colored cells briefly, and then they have to be guessed. Multiple levels of difficulty, and checkpoints to continue from the last level you reached.
 
+https://github.com/TinfoilBat/php-says/blob/production/static/memory_image.jpeg
+
 ___
 # Installation instructions
 
