@@ -8,9 +8,9 @@ Displays different colored cells briefly, and then they have to be guessed. Mult
 ___
 # Installation instructions
 
-1. cd to ServerRoot
+1. cd to localhost
 ```bash
-cd /path/to/server/root
+cd /var/www/html
 ```
 2. Clone repo
 ```bash
@@ -21,7 +21,10 @@ git clone https://github.com/TinfoilBat/php-says.git
 ```bash
 systemctl start apache2.service
 ```
-4. Open in browser
+4. Open final path in browser
+```bash
+firefox localhost/php-says
+```
 
 ___
 
