@@ -6,6 +6,18 @@ Displays different colored cells briefly, and then they have to be guessed. Mult
 ![](https://github.com/TinfoilBat/php-says/blob/0e653c4168ff5b2dd41d09c6f606b6f3c5705bf6/static/memory_image.jpeg)
 
 ___
+
+# Previous installation
+
+1. Update packages and install apache2
+```bash
+sudo apt update && sudo apt install apache2
+ ```
+2. Start Apache
+```bash
+systemctl start apache2.service
+```
+___
 # Installation instructions
 
 1. cd to localhost
