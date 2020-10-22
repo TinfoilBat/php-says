@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/main.css">
-    <title>MENU</title>
+    <title>JUEGO</title>
 </head>
 <body>
-    <a class="home" href="index.php">HOME</a>
-    <a class="home" href="juego.php">GAME</a>
+    <?php
+        include('menu.html');
+    ?>
+    <h1>GAME</h1>
 </body>
 </html>
