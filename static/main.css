@@ -1,0 +1,56 @@
+body {
+	background-color: #414b56;
+}
+
+.home {
+	background-color: #2774a6;
+}
+
+.text-white {
+	color: #ffffff ;
+	font-family: 'Krona One', sans-serif;
+} 
+
+.nombre {
+	display: flex;
+	margin-left: 2rem;
+	width: 50%;
+}
+
+.derecha {
+	display: flex;
+	margin-right: 2rem;
+	justify-content: flex-end;
+	width: 50%;
+}
+
+.posicion {
+	margin-top: 2rem;
+	display: flex;	
+	align-content: space-between;
+}
+.letra {
+	font-family: 'Commissioner', sans-serif;
+	color: #ffffff;
+}
+
+.boton {
+	background-color:#2774a6;
+	border-radius:3px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+}
+.boton:hover {
+	background-color:#019ad2;
+}
+.boton:active {
+	border-color:#2774a6 ;
+	top:1px;
+}

@@ -1,5 +1,7 @@
-<?php
-        include('menu.html');
+<body class="letra">
+    <?php
+        include('menu.php');
+
     ?>
     <h1 class="text-white">BIENVENIDO A MEMORY GAME</h1>
     <p>
@@ -9,7 +11,7 @@
     </p>
     <img src="static/MemoryGame.jpg" alt="memoryGame">
     <h2 class="text-white">INSTRUCCIONES DE MEMORY GAME</h2>
-    <p>A continuación aparecen todos los pasos a seguir del juego: </p>
+    <p class="letra">A continuación aparecen todos los pasos a seguir del juego: </p>
     <ol type="1">
         <li>Primero de todo darle al botón de iniciar.</li>
         <li>Esperar mientras se muestran las celdas de color amarillo.</li>
@@ -19,22 +21,17 @@
         <li>El juego ya se ha terminado, si quieres empezar de nuevo darle al botón de HOME (arriba a la derecha) y volver a iniciar la partida.</li>
     </ol>
 
-		
+    <div>
+        <form method="POST"> 
+            <label for="nombre" minlength="1">Escribe tu nombre: </label>
+            <input type="text" name="nombre" required></input>
+            <button>Enviar</button>
+        </form>
+    </div>
 
-    <?php 
-        session_start();
-        echo '
-        <div>
-            <form>
-                <label for="nombre" minlength="1">Escribe tu nombre: </label><input type="text" name="nombre"></input>
-                <input type="submit"/> 
-            </form>
-				</div>
-				';
-		?>
 		
-		<button onclick="parent.location='juego.php'">JUEGO</button>
-		<button>RESOLVER</button>
+		<button class="boton" onclick="parent.location='juego.php'">JUEGO</button>
+		<button class="boton" >RESOLVER</button>
 
 </body>
 </html> 
