@@ -10,7 +10,9 @@ body {
 .text-white {
 	color: #ffffff ;
 	font-family: 'Krona One', sans-serif;
-} 
+}
+
+
 
 .nombre {
 	display: flex;
@@ -57,3 +59,7 @@ body {
 	top:1px;
 }
 
+.gameover {
+	color: #ffffff;
+	font-family: 'Oswald', sans-serif;
+}

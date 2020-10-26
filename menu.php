@@ -6,6 +6,7 @@
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 		@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@300&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 	</style>
 </head>
 <body>		
