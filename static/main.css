@@ -12,16 +12,17 @@ body {
 }
 
 .nombre {
-	display: flex;
 	margin-left: 2rem;
-	width: 50%;
+	color: #ffffff ;
+	font-family: 'Krona One', sans-serif;
+	text-align: center;
 }
 
 .derecha {
 	display: flex;
 	margin-right: 2rem;
 	justify-content: flex-end;
-	width: 50%;
+	width: 100%;
 }
 
 .posicion {

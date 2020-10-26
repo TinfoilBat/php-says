@@ -14,7 +14,9 @@
 <body>
 		<?php
 			include('menu.php');
-			$_SESSION
+			session_start();
+			$_SESSION['nombre'] = $_POST['nombre'];
+			echo '<div class="nombre">' . $_SESSION['nombre'] . '</div>';
 		?>
 		<?php
 		require('function/f.php');

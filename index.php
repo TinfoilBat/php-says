@@ -3,6 +3,7 @@
         include('menu.php');
     ?>
 
+
     <div class="">
         <h1 class="text-white">BIENVENIDO A MEMORY GAME</h1>
         <p>
@@ -22,17 +23,16 @@
             <li>El juego ya se ha terminado, si quieres empezar de nuevo darle al botón de HOME (arriba a la derecha) y volver a iniciar la partida.</li>
         </ol>
 
-        <div>
-            <form method="POST"> 
+        <div class="centro">
+            <form method="POST" action="game.php"> 
                 <label for="nombre" minlength="1">Escribe tu nombre: </label>
                 <input type="text" name="nombre" required></input>
-                <button>Enviar</button>
+                <br>
+                <br>
+                <button class="boton"> Enviar</button>
             </form>
         </div>
     </div>
 		
-		<button class="boton" onclick="parent.location='game.php'">JUEGO</button>
-		<button class="boton" >RESOLVER</button>
-
 </body>
 </html> 
