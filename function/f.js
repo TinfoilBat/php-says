@@ -8,7 +8,7 @@ function revealColor() {
 function vanishColor(){
 	let elements = document.querySelectorAll('.correct');
 	for (let i = 0; i < elements.length; i++) {
-		elements[i].style.color = 'black';
+		elements[i].style.color = 'white';
 	}
 }
 
@@ -21,14 +21,14 @@ function showCorrectCells4Seconds() {
 
 function toogle(id) {
 	let element = document.getElementById(id);
-	if (element.className === 'toogled') {
-		element.className = '';
+	if ((!(element.classList.contains('toogled'))) || (!(element.classList.contains('untoogled')))) {
+		element.classList.add('toogled')
 	}
-	else {
-		element.className = 'toogled';
+	else if (element.classList.contains('toogled')) {
+		element.classList.toggle('toogled')
 	}
+	
 }
-
 function loadToogleOnCells() {
 	let elements = document.getElementsByTagName('td');
 	for (let i = 0; i < elements.length; i++) {
