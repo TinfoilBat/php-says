@@ -1,16 +1,23 @@
-<body class="letra">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO</title>
+</head>
+<body class="letra inicio">
     <?php
         include('menu.php');
     ?>
-
-
+    
+    
     <div class="">
         <h1 class="text-white">BIENVENIDO A MEMORY GAME</h1>
-        <p>
+        <pre>
             Este juego se basa en memorizar los colores de las celdas que se enciendan, las celdas que se encienden de color amarillo
             al cabo de 4 segundos se apagaran y el usuario tendrá que seleccionar aquellas celdas que se han encendido. Si el usuario 
             ha acertado las 7 celdas que se encienden de color habrá ganado el juego.
-        </p>
+        </pre>
         <img src="static/MemoryGame.jpg" alt="memoryGame">
         <h2 class="text-white">INSTRUCCIONES DE MEMORY GAME</h2>
         <p class="letra">A continuación aparecen todos los pasos a seguir del juego: </p>
@@ -25,14 +32,18 @@
 
         <div class="centro">
             <form method="POST" action="game.php"> 
-                <label for="nombre" minlength="1">Escribe tu nombre: </label>
-                <input type="text" name="nombre" required></input>
-                <br>
-                <br>
-                <button class="boton"> Enviar</button>
+                <div>
+                    <label for="nombre" minlength="1">Introduce tu nombre: </label>
+                </div>
+                <div class="espaciado">
+                    <input type="text" name="nombre" required></input>
+                </div>
+                <div>
+                    <button class="boton"> Enviar</button>
+                </div>
             </form>
         </div>
     </div>
-		
+    
 </body>
-</html> 
+</html>

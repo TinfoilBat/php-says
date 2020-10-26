@@ -8,7 +8,9 @@
 	<script src="function/f.js"></script>
 	<script src="text/javascript">
 		document.addEventListener('DOMContentLoaded', loadToogleOnCells());
+		src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous">
 	</script>
+	<script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -16,7 +18,7 @@
 			include('menu.php');
 			session_start();
 			$_SESSION['nombre'] = $_POST['nombre'];
-			echo '<div class="nombre">' . $_SESSION['nombre'] . '</div>';
+			echo '<div class="nombre"> <p><i class="far fa-user"></i> ' . $_SESSION['nombre'] . '</p></div>';
 		?>
 		<?php
 		require('function/f.php');

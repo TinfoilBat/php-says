@@ -1,5 +1,11 @@
 body {
 	background-color: #414b56;
+	justify-items: left;
+}
+
+pre {
+	font-family: 'Commissioner', sans-serif;
+	color: #ffffff;
 }
 
 .home {
@@ -34,6 +40,10 @@ body {
 .letra {
 	font-family: 'Commissioner', sans-serif;
 	color: #ffffff;
+}
+
+.inicio {
+	margin-left: 2rem;
 }
 
 .boton {
@@ -104,3 +114,6 @@ table.tablaJuego {
 	padding: 2px 8px;
 	border-radius: 5px;
   }
+.espaciado {
+	margin: 1rem;
+}
