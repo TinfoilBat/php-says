@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>JUEGO</title>
 	<script src="function/f.js"></script>
 	<script src="text/javascript">
 			document.addEventListener('DOMContentLoaded', loadToogleOnCells());

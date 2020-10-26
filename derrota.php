@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DERROTA</title>
     <link rel="stylesheet" href="static/main.css">
+    <link rel="stylesheet" href="static/gameover.css">
+
 </head>
 <body>
     <?php include('menu.php'); 
