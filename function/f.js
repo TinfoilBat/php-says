@@ -5,7 +5,7 @@ function revealColor() {
 	}
 }
 
-function vanishColor(){
+function vanishColor() {
 	let elements = document.querySelectorAll('.correct');
 	for (let i = 0; i < elements.length; i++) {
 		elements[i].style.color = 'white';
@@ -27,7 +27,7 @@ function toogle(id) {
 	else if (element.classList.contains('toogled')) {
 		element.classList.toggle('toogled')
 	}
-	
+
 }
 function loadToogleOnCells() {
 	let elements = document.getElementsByTagName('td');
@@ -35,20 +35,37 @@ function loadToogleOnCells() {
 		elements[i].addEventListener("click", toogle(elements[i].id));
 	}
 }
-
-function startFanfare() {
-	loadToogleOnCells();
-	showCorrectCells4Seconds();
-}
-
 function solve() {
 	let elements = document.querySelectorAll('.toogled');
 	let corrects = document.querySelectorAll('.correct');
 
 	if (elements === corrects) {
 		return true;
-	}
-	else {
+	} if (elements == null || corrects == null) {
+		return false;
+	} if (elements.length !== corrects.length) {
 		return false;
 	}
+
+	for (let i = 0; i < elements.length; ++i) {
+		if (elements[i] !== corrects[i]) {
+			return false;
+		}
+	}
+	return true;
 }
+
+function postGame() {
+	let result = solve();
+	if (result === true) {
+		window.location = '/victoria.php';
+	}
+	else {
+		window.location = '/derrota.php'
+	}
+}
+
+// function startFanfare() {
+// 	loadToogleOnCells();
+// 	showCorrectCells4Seconds();
+// }
