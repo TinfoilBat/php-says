@@ -1,5 +1,6 @@
 body {
 	background-color: #414b56;
+	margin-left: 2rem;
 }
 
 .home {
@@ -29,6 +30,7 @@ body {
 	display: flex;	
 	align-content: space-between;
 }
+
 .letra {
 	font-family: 'Commissioner', sans-serif;
 	color: #ffffff;
@@ -54,3 +56,4 @@ body {
 	border-color:#2774a6 ;
 	top:1px;
 }
+
