@@ -3,7 +3,7 @@
         include('menu.php');
     ?>
 
-    <div class="espaciado">
+    <div class="">
         <h1 class="text-white">BIENVENIDO A MEMORY GAME</h1>
         <p>
             Este juego se basa en memorizar los colores de las celdas que se enciendan, las celdas que se encienden de color amarillo
@@ -30,10 +30,9 @@
             </form>
         </div>
     </div>
-
-    <?php
-        include('buttons.html');
-    ?>
+		
+		<button class="boton" onclick="parent.location='game.php'">JUEGO</button>
+		<button class="boton" >RESOLVER</button>
 
 </body>
 </html> 

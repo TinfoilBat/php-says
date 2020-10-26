@@ -9,7 +9,7 @@
 	</style>
 </head>
 <body>		
-	<div class="posicion">	
+	<div class="posicion letra">	
 		<?php 
 			session_start(); 
 			//$_SESSION['nombre'] = $_POST['nombre'];

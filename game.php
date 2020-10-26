@@ -9,18 +9,23 @@
 </head>
 
 <body>
-	<table border="1">
+		<?php
+			include('menu.php');
+			$_SESSION
+		?>
+	<table class="letra" border="1">
 		<?php
 		require('function/f.php');
 		$rands = uniqueRandomsInClusiveRange(0, 25, 7);
 		generateTable(5,5, $rands)
 		?>
 	</table>
+	<br>
 
 </body>
 <footer>
 	<?php
-	include('buttons.html');
+		include('buttons.html');
 	?>
 </footer>
 </html>
