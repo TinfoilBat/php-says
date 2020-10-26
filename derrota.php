@@ -6,9 +6,10 @@
     <title>VICTORIA</title>
 </head>
 <body>
-    <?php include('menu.php'); ?>
-    <div>
-        <h1 class="gameover">GAME OVER</h1>
-    </div>
+    <?php include('menu.php'); 
+    echo '<h1 class="gameover"> GAME OVER</h1>'
+    ?>
+
+
 </body>
 </html>
