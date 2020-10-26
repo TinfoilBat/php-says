@@ -30,9 +30,10 @@
             </form>
         </div>
     </div>
-		
-		<button class="boton" onclick="parent.location='juego.php'">JUEGO</button>
-		<button class="boton" >RESOLVER</button>
+
+    <?php
+        include('buttons.html');
+    ?>
 
 </body>
 </html> 
