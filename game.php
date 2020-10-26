@@ -7,8 +7,8 @@
 	<title>JUEGO</title>
 	<script src="function/f.js"></script>
 	<script src="text/javascript">
-			document.addEventListener('DOMContentLoaded', loadToogleOnCells());
-		</script>
+		document.addEventListener('DOMContentLoaded', loadToogleOnCells());
+	</script>
 </head>
 
 <body>
@@ -16,13 +16,11 @@
 			include('menu.php');
 			$_SESSION
 		?>
-	<table class="letra" border="1">
 		<?php
 		require('function/f.php');
 		$rands = uniqueRandomsInClusiveRange(0, 25, 7);
 		generateTable(5, 5, $rands)
 		?>
-	</table>
 	<br>
 
 </body>
