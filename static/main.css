@@ -1,5 +1,11 @@
 body {
 	background-color: #414b56;
+	justify-items: left;
+}
+
+pre {
+	font-family: 'Commissioner', sans-serif;
+	color: #ffffff;
 }
 
 .home {
@@ -12,20 +18,21 @@ body {
 }
 
 .nombre {
-	display: flex;
 	margin-left: 2rem;
-	width: 50%;
+	color: #ffffff ;
+	font-family: 'Krona One', sans-serif;
+	text-align: center;
 }
 
 .derecha {
 	display: flex;
 	margin-right: 2rem;
 	justify-content: flex-end;
-	width: 50%;
+	width: 100%;
 }
 
 .posicion {
-	margin-top: 2rem;
+	margin: 2rem;
 	display: flex;	
 	align-content: space-between;
 }
@@ -33,6 +40,10 @@ body {
 .letra {
 	font-family: 'Commissioner', sans-serif;
 	color: #ffffff;
+}
+
+.inicio {
+	margin-left: 2rem;
 }
 
 .boton {
@@ -66,4 +77,43 @@ body {
 
 .correct {
 	color: #ffffff;
+}
+
+.tabla {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+table.tablaJuego {
+	font-family: Verdana, Geneva, sans-serif;
+	width: 40rem;
+	height: 40rem;
+	text-align: center;
+	border-collapse: collapse;
+	margin: 3rem;
+}
+  table.tablaJuego td, table.tablaJuego th {
+	border: 2px solid #2774A6;
+	padding: 3px 3px;
+  }
+  table.tablaJuego tbody td {
+	font-size: 15px;
+  }
+  table.tablaJuego tfoot td {
+	font-size: 14px;
+  }
+  table.tablaJuego tfoot .links {
+	text-align: right;
+  }
+  table.tablaJuego tfoot .links a{
+	display: inline-block;
+	background: #1C6EA4;
+	color: #FFFFFF;
+	padding: 2px 8px;
+	border-radius: 5px;
+  }
+.espaciado {
+	margin: 1rem;
 }

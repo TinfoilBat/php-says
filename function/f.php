@@ -8,6 +8,7 @@ function uniqueRandomsInClusiveRange($min, $max, $quantity)
 
 function generateTable($height, $width, $correctCells)
 {
+	echo '<div class="centro tabla"><table class="letra tablaJuego">';
 	$counter = 0;
 	for ($i = 0; $i < $height; $i++) {
 		echo "<tr>";
@@ -21,4 +22,5 @@ function generateTable($height, $width, $correctCells)
 		}
 		echo "</tr>";
 	}
+	echo '</div></table>';
 }

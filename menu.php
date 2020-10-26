@@ -11,13 +11,6 @@
 </head>
 <body>		
 	<div class="posicion letra">	
-		<?php 
-			session_start(); 
-			//$_SESSION['nombre'] = $_POST['nombre'];
-			$_SESSION['nombre'] = 'NAME';
-			echo '<div class="nombre">' . $_SESSION['nombre'] . '</div>';
-		?>
-
 		<div class="derecha">
 			<button class="boton" onclick="parent.location='index.php'">HOME</button>
 		</div>
