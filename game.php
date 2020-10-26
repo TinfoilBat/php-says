@@ -12,10 +12,10 @@
 </head>
 
 <body>
-	<?php
-	include('menu.php');
-	$_SESSION
-	?>
+		<?php
+			include('menu.php');
+			$_SESSION
+		?>
 	<table class="letra" border="1">
 		<?php
 		require('function/f.php');
@@ -28,7 +28,7 @@
 </body>
 <footer>
 	<?php
-	include('buttons.html');
+		include('buttons.html');
 	?>
 </footer>
 

@@ -35,3 +35,20 @@ function loadToogleOnCells() {
 		elements[i].addEventListener("click", toogle(elements[i].id));
 	}
 }
+
+function startFanfare() {
+	loadToogleOnCells();
+	showCorrectCells4Seconds();
+}
+
+function solve() {
+	let elements = document.querySelectorAll('.toogled');
+	let corrects = document.querySelectorAll('.correct');
+
+	if (elements === corrects) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
