@@ -1,4 +1,6 @@
 <?php
+$readyToPlay = false;
+
 function uniqueRandomsInClusiveRange($min, $max, $quantity)
 {
 	$numbers = range($min, $max);
@@ -14,9 +16,9 @@ function generateTable($height, $width, $correctCells)
 		echo "<tr>";
 		for ($x = 0; $x < $width; $x++) {
 			if (in_array($counter, $correctCells)) {
-				echo "<td class=\"correct\" id=\"{$counter}\" onclick=\"toogle(this.id)\">CORRECT</td>";
+				echo "<td class=\"correct\" id=\"{$counter}\" onclick=\"toggle({$counter})\">CORRECT</td>";
 			} else {
-				echo "<td class=\"incorrect\" id=\"{$counter}\" onclick=\"toogle(this.id)\">INCORRECT</td>";
+				echo "<td class=\"incorrect\" id=\"{$counter}\" onclick=\"toggle({$counter})	\">INCORRECT</td>";
 			}
 			$counter++;
 		}

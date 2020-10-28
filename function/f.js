@@ -1,3 +1,5 @@
+let readyToPlay = false;
+
 function revealColor() {
 	let elements = document.querySelectorAll('.correct')
 	for (let i = 0; i < elements.length; i++) {
@@ -19,24 +21,21 @@ function showCorrectCells4Seconds() {
 	}, 4000);
 }
 
-function toogle(id) {
-	let element = document.getElementById(id);
-	if ((!(element.classList.contains('toogled'))) || (!(element.classList.contains('untoogled')))) {
-		element.classList.add('toogled')
-	}
-	else {
-		element.classList.remove('toogled')
+function toggle(id) {
+	if (readyToPlay == false) {
+		return 0
+	} else {
+		let element = document.getElementById(id);
+		element.classList.toggle('toggled');
 	}
 
 }
-function loadToogleOnCells() {
-	let elements = document.getElementsByTagName('td');
-	for (let i = 0; i < elements.length; i++) {
-		elements[i].addEventListener("click", toogle(elements[i].id));
+function allowToggleOnCells() {
+	readyToPlay = true;
 	}
-}
+
 function solve() {
-	let elements = document.querySelectorAll('.toogled');
+	let elements = document.querySelectorAll('.toggled');
 	let corrects = document.querySelectorAll('.correct');
 
 	if (elements === corrects) {
@@ -65,7 +64,7 @@ function postGame() {
 	}
 }
 
-// function startFanfare() {
-// 	loadToogleOnCells();
-// 	showCorrectCells4Seconds();
-// }
+function startFanfare() {
+	showCorrectCells4Seconds();
+	allowToggleOnCells();
+ }

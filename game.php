@@ -6,9 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>JUEGO</title>
 	<script src="function/f.js"></script>
-	<script src="text/javascript">
-		document.addEventListener('DOMContentLoaded', loadToogleOnCells());
-	</script>
 	<script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
 </head>
 
