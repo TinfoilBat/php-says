@@ -117,3 +117,7 @@ table.tablaJuego {
 .espaciado {
 	margin: 1rem;
 }
+
+.toggled td {
+    background-color: white;
+} 
