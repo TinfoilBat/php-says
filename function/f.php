@@ -2,6 +2,8 @@
 
 function uniqueRandomsInClusiveRange($min, $max, $quantity)
 {
+	$nivel = 2;
+	$max = (readFileConfig()[$nivel][1][0] * readFileConfig()[$nivel][1][2]);
 	$numbers = range($min, $max);
 	shuffle($numbers);
 	return array_slice($numbers, 0, $quantity);
@@ -44,5 +46,3 @@ function readFileConfig() {
 	}
 	return $x = $Niveles;
 }
-
-
