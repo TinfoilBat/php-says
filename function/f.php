@@ -15,9 +15,9 @@ function generateTable($height, $width, $correctCells)
 		echo "<tr>";
 		for ($x = 0; $x < $width; $x++) {
 			if (in_array($counter, $correctCells)) {
-				echo "<td class=\"correct\" id=\"{$counter}\" onclick=\"toggle({$counter})\">CORRECT</td>";
+				echo "<td class=\"correct\" id=\"{$counter}\" onclick=\"toggle({$counter})\"></td>";
 			} else {
-				echo "<td class=\"incorrect\" id=\"{$counter}\" onclick=\"toggle({$counter})	\">INCORRECT</td>";
+				echo "<td class=\"incorrect\" id=\"{$counter}\" onclick=\"toggle({$counter})	\"></td>";
 			}
 			$counter++;
 		}
