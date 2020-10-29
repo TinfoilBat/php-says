@@ -75,8 +75,13 @@ pre {
 	color: #ffffff;
 }
 
-.correct {
+.correct{
 	color: #ffffff;
+}
+
+.correctC {
+	background: #f4e04d;
+
 }
 
 .tabla {
@@ -118,6 +123,6 @@ table.tablaJuego {
 	margin: 1rem;
 }
 
-.toggled td {
-    background-color: white;
+.toggled {
+    background: white;
 } 
