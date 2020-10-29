@@ -1,4 +1,5 @@
-// muestra de color
+let readyToPlay = false;
+
 function revealColor() {
 	let elements = document.querySelectorAll('.correct')
 	for (let i = 0; i < elements.length; i++) {
@@ -6,12 +7,8 @@ function revealColor() {
 	}
 }
 
-<<<<<<< HEAD
-function vanishColor() {
-=======
 // hace que vuelva al color predeterminado despues de 4 sec
 function vanishColor(){
->>>>>>> dvd_dev
 	let elements = document.querySelectorAll('.correct');
 	for (let i = 0; i < elements.length; i++) {
 		elements[i].style.color = 'white';
@@ -25,6 +22,21 @@ function showCorrectCells4Seconds() {
 		vanishColor()
 	}, 4000);
 }
+
+
+function toggle(id) {
+	if (readyToPlay == false) {
+		return 0
+	} else {
+		let element = document.getElementById(id);
+		element.classList.toggle('toggled');
+	}
+
+}
+function allowToggleOnCells() {
+	readyToPlay = true;
+	}
+
 
 // funcion que da clases cuando clicas
 function toogle(id) {
@@ -45,8 +57,6 @@ function loadToogleOnCells() {
 		elements[i].addEventListener("click", toogle(elements[i].id));
 	}
 }
-<<<<<<< HEAD
-=======
 
 // carga las celdas correctas y las ilumina (fallo)
 function startFanfare() {
@@ -54,9 +64,9 @@ function startFanfare() {
 	showCorrectCells4Seconds();
 }
 
->>>>>>> dvd_dev
+
 function solve() {
-	let elements = document.querySelectorAll('.toogled');
+	let elements = document.querySelectorAll('.toggled');
 	let corrects = document.querySelectorAll('.correct');
 
 	if (elements === corrects) {
@@ -85,7 +95,7 @@ function postGame() {
 	}
 }
 
-// function startFanfare() {
-// 	loadToogleOnCells();
-// 	showCorrectCells4Seconds();
-// }
+function startFanfare() {
+	showCorrectCells4Seconds();
+	allowToggleOnCells();
+ }

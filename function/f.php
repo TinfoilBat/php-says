@@ -1,9 +1,15 @@
 <?php
+<<<<<<< HEAD
 $nivel = 0;
 $celdas = (readFileConfig()[0][1][0] * readFileConfig()[0][1][2]);
 echo $celdas;
 
 function uniqueRandomsInClusiveRange($min, $celdas, $quantity)
+=======
+$readyToPlay = false;
+
+function uniqueRandomsInClusiveRange($min, $max, $quantity)
+>>>>>>> preprod
 {
 	$numbers = range($min, $max);
 	shuffle($numbers);
@@ -18,9 +24,9 @@ function generateTable($height, $width, $correctCells)
 		echo "<tr>";
 		for ($x = 0; $x < $width; $x++) {
 			if (in_array($counter, $correctCells)) {
-				echo "<td class=\"correct\" id=\"{$counter}\" onclick=\"toogle(this.id)\">CORRECT</td>";
+				echo "<td class=\"correct\" id=\"{$counter}\" onclick=\"toggle({$counter})\">CORRECT</td>";
 			} else {
-				echo "<td class=\"incorrect\" id=\"{$counter}\" onclick=\"toogle(this.id)\">INCORRECT</td>";
+				echo "<td class=\"incorrect\" id=\"{$counter}\" onclick=\"toggle({$counter})	\">INCORRECT</td>";
 			}
 			$counter++;
 		}
