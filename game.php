@@ -26,7 +26,7 @@
 </body>
 <footer>
 	<?php
-	include('buttons.html');
+	include('game_buttons.html');
 	?>
 </footer>
 
