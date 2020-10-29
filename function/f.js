@@ -16,11 +16,11 @@ function vanishColor(){
 }
 
 // se muestran durantos los segundos
-function showCorrectCells4Seconds() {
+function showCorrectCellsSomeSeconds(seconds) {
 	revealColor();
 	setTimeout(() => {
 		vanishColor()
-	}, 4000);
+	}, seconds);
 }
 
 
@@ -59,9 +59,9 @@ function loadToogleOnCells() {
 }
 
 // carga las celdas correctas y las ilumina (fallo)
-function startFanfare() {
+function startFanfare(seconds) {
+	showCorrectCellsSomeSeconds(seconds);
 	loadToogleOnCells();
-	showCorrectCells4Seconds();
 }
 
 
@@ -95,7 +95,3 @@ function postGame() {
 	}
 }
 
-function startFanfare() {
-	showCorrectCells4Seconds();
-	allowToggleOnCells();
- }
