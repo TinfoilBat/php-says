@@ -18,8 +18,22 @@
 	?>
 	<?php
 	require('function/f.php');
-	$rands = uniqueRandomsInClusiveRange(0, 25, 7);
-	generateTable(5, 5, $rands)
+	//Lo tendra que introducir el usuario
+	$nivel = 9;
+	print_r(readFileConfig()[$nivel]);
+	//Total de celdas segun el nivel
+	$Tceldas = readFileConfig()[$nivel][1][0] * readFileConfig()[$nivel][1][2];
+	//Num Celdas correctas 
+	$CeldasC = readFileConfig()[$nivel][2];
+	// Genera aleatoriamente los numeros de las celdas que son correctas
+	$rands = uniqueRandomsInClusiveRange(0, $Tceldas, $CeldasC);
+	//altura de la tabla
+	$hCeldas = readFileConfig()[$nivel][1][0];
+	//anchura de la tabla
+	$wCeldas = readFileConfig()[$nivel][1][2];
+	//Genera la tabla a partir de las variables definidas anteriormente
+	generateTable($hCeldas, $wCeldas, $rands);
+
 	?>
 	<br>
 

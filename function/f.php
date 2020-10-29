@@ -44,5 +44,3 @@ function readFileConfig() {
 	}
 	return $x = $Niveles;
 }
-
-
