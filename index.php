@@ -26,7 +26,6 @@
 		<p class="letra">A continuación aparecen todos los pasos a seguir del juego: </p>
 		<ol type="1">
 			<?php
-			echo "SESSION variable: " . $_SESSION["nombre"];
 			?>
 			<li>Primero de todo darle al botón de iniciar.</li>
 			<li>Esperar mientras se muestran las celdas de color amarillo.</li>
@@ -45,6 +44,7 @@
 					if (isset($_SESSION["nombre"])) {
 						echo "<input type=\"text\" name=\"nombre\" value=\"{$_SESSION["nombre"]}\"required></input>";
 					} else {
+						session_destroy();
 						echo "<input type=\"text\" name=\"nombre\" required></input>";
 					}
 					?>
@@ -55,8 +55,5 @@
 			</form>
 		</div>
 	</div>
-
-
 </body>
-
 </html>
