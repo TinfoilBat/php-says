@@ -3,7 +3,7 @@ let readyToPlay = false;
 function revealColor() {
 	let elements = document.querySelectorAll('.correct')
 	for (let i = 0; i < elements.length; i++) {
-		elements[i].style.color = 'yellow';
+		elements[i].style.backgroundColor  = '#f4e04d';
 	}
 }
 
@@ -11,7 +11,7 @@ function revealColor() {
 function vanishColor(){
 	let elements = document.querySelectorAll('.correct');
 	for (let i = 0; i < elements.length; i++) {
-		elements[i].style.color = 'white';
+		elements[i].style.backgroundColor  = '';
 	}
 }
 
@@ -88,10 +88,10 @@ function solve() {
 function postGame() {
 	let result = solve();
 	if (result === true) {
-		window.location = '/victoria.php';
+		window.location = 'victoria.php';
 	}
 	else {
-		window.location = '/derrota.php'
+		window.location = 'derrota.php'
 	}
 }
 
