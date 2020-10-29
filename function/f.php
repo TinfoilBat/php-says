@@ -1,15 +1,6 @@
 <?php
-<<<<<<< HEAD
-$nivel = 0;
-$celdas = (readFileConfig()[0][1][0] * readFileConfig()[0][1][2]);
-echo $celdas;
-
-function uniqueRandomsInClusiveRange($min, $celdas, $quantity)
-=======
-$readyToPlay = false;
 
 function uniqueRandomsInClusiveRange($min, $max, $quantity)
->>>>>>> preprod
 {
 	$numbers = range($min, $max);
 	shuffle($numbers);
