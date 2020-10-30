@@ -39,7 +39,7 @@ function loadToggleOnCells() {
 	readyToPlay = true;
 	let elements = document.getElementsByTagName('td');
 	for (let i = 0; i < elements.length; i++) {
-		elements[i].addEventListener("click", toggle(elements[i].id));
+		elements[i].addEventListener("click", toggle());
 	}
 }
 
