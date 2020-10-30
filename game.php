@@ -37,12 +37,13 @@
 	//Determina los segundos que se muestran las celdas correctas
 	//$segundos = readFileConfig()[$nivel][3];
 	$segundos = 2000;
-
-	//"Exporta" la variable de segundos a Javascript para que podamos jugar con ella desde ahí.
-	echo "<script type=\"text/javascript\">
-        let seconds = \"<?php echo $segundos;?>\";
-    </script>"
 	?>
+	
+	<!-- "Exporta" la variable de segundos a Javascript para que podamos jugar con ella desde ahí. -->
+	<script type="text/javascript">
+		let seconds = <?php echo json_encode($segundos, JSON_HEX_TAG); ?>;
+	</script>
+	
 	<br>
 
 </body>
