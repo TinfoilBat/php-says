@@ -18,6 +18,7 @@
 	?>
 	<?php
 	require('function/f.php');
+
 	//Lo tendra que introducir el usuario
 	$nivel = 9;
 	print_r(readFileConfig()[$nivel]);
@@ -33,7 +34,14 @@
 	$wCeldas = readFileConfig()[$nivel][1][2];
 	//Genera la tabla a partir de las variables definidas anteriormente
 	generateTable($hCeldas, $wCeldas, $rands);
+	//Determina los segundos que se muestran las celdas correctas
+	//$segundos = readFileConfig()[$nivel][3];
+	$segundos = 2000;
 
+	//"Exporta" la variable de segundos a Javascript para que podamos jugar con ella desde ahí.
+	echo "<script type=\"text/javascript\">
+        let seconds = \"<?php echo $segundos;?>\";
+    </script>"
 	?>
 	<br>
 
