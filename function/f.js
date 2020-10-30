@@ -42,10 +42,10 @@ function allowToggleOnCells() {
 function toogle(id) {
 	let element = document.getElementById(id);
 	if ((!(element.classList.contains('toogled'))) || (!(element.classList.contains('untoogled')))) {
-		element.classList.add('toogled')
+		element.classList.add('toggled')
 	}
 	else {
-		element.classList.remove('toogled')
+		element.classList.remove('toggled')
 	}
 
 }
