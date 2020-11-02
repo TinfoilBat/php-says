@@ -19,8 +19,15 @@
 	<?php
 	require('function/f.php');
 	//Lo tendra que introducir el usuario
-	$nivel = 9;
-	print_r(readFileConfig()[$nivel]);
+	$nivel = 0;
+
+	if ($nivel <= 9 and $nivel >=0 ) {
+		echo "esta entre 0 y 9";
+	} elseif ($nivel == 10) {
+		echo "<script> window.location.replace('victoria.php'); </script>";
+	} else {
+		die;
+	}
 	//Total de celdas segun el nivel
 	$Tceldas = readFileConfig()[$nivel][1][0] * readFileConfig()[$nivel][1][2];
 	//Num Celdas correctas 
@@ -33,7 +40,8 @@
 	$wCeldas = readFileConfig()[$nivel][1][2];
 	//Genera la tabla a partir de las variables definidas anteriormente
 	generateTable($hCeldas, $wCeldas, $rands);
-
+	//Codigo de nivel
+	$_SESSION['codigo'] = readFileConfig()[$nivel][4];
 	?>
 	<br>
 
