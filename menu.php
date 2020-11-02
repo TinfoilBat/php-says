@@ -12,7 +12,7 @@
 <body>		
 	<div class="posicion letra">	
 		<div class="derecha">
-			<button class="boton" onclick="parent.location='index.php'">HOME</button>
+			<button class="boton" onclick="parent.location='index.php'" accesskey="I" >INICIO</button>
 		</div>
 	</div>
 </body>
