@@ -126,3 +126,8 @@ table.tablaJuego {
 .toggled {
     background: white;
 } 
+
+.centrado {
+	justify-content: center;
+	margin-top: 5rem;
+}
