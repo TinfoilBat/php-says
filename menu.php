@@ -12,7 +12,16 @@
 <body>		
 	<div class="posicion letra">	
 		<div class="derecha">
-			<button class="boton" onclick="parent.location='index.php'">HOME</button>
+			<?php
+			session_start();
+			if ($_SERVER['REQUEST_URI'] === '/php-says/index.php') {
+				echo "<button class='boton espaciado' onclick=\"parent.location='index.php'\">RANKING</button>";
+				echo "<button class='boton espaciado' onclick=\"parent.location='index.php'\">INICIO</button>";
+			}
+			else {
+				echo "<button class='boton espaciado' onclick=\"parent.location='index.php'\">INICIO</button>";
+			}
+			?>
 		</div>
 	</div>
 </body>
