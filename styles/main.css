@@ -126,8 +126,17 @@ table.tablaJuego {
 .toggled {
     background: white;
 } 
+<<<<<<< Updated upstream:static/main.css
+=======
 
 .centrado {
 	justify-content: center;
 	margin-top: 5rem;
+	text-align: center;
+
 }
+
+.codigo {
+	margin-bottom: 1rem;
+}
+>>>>>>> Stashed changes:styles/main.css

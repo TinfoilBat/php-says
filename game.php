@@ -20,7 +20,7 @@
 	require('function/f.php');
 
 	//Lo tendra que introducir el usuario
-	$nivel = 0;
+	$nivel = 5;
 
 	if ($nivel <= 9 and $nivel >=0 ) {
 		echo "esta entre 0 y 9";
