@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DERROTA</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/gameover.css">
+    <link rel="stylesheet" href="static/main.css">
+    <link rel="stylesheet" href="static/gameover.css">
 
 </head>
 <body>
-		<?php 
-		session_start();
-		include('menu.php'); 
+    <?php include('menu.php'); 
     ?>
 
     <div class="GAMEOVER">
@@ -20,9 +18,10 @@
             <h3> NO HAS ACERTADO TODAS LAS CASILLAS </h3>
         </div>
     </div>
+        
 
 		<?php
-		include('post_game_buttons.html')
+		include('post_game_buttons.php')
 		?>
 </body>
 </html>
