@@ -46,7 +46,9 @@ function loadToggleOnCells() {
 // carga las celdas correctas y las ilumina (fallo)
 function startFanfare(seconds) {
 	showCorrectCellsSomeSeconds(seconds);
-	loadToggleOnCells();
+	setTimeout(() => {
+		loadToggleOnCells();
+	}, seconds);
 }
 
 
@@ -76,7 +78,7 @@ function postGame() {
 		window.location = 'victoria.php';
 	}
 	else {
-		window.location = 'derrota.php'
+		window.location = 'derrota.php';
 	}
 }
 
