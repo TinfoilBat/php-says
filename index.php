@@ -45,12 +45,12 @@
 						echo "<input type=\"text\" name=\"nombre\" value=\"{$_SESSION["nombre"]}\"required></input>";
 					} else {
 						session_destroy();
-						echo "<input type=\"text\" name=\"nombre\" required></input>";
+						echo '<input type="text" id="nombre" name="nombre" required></input>';
 					}
 					?>
 				</div>
 				<div>
-					<button class="boton"> Enviar</button>
+					<button class="boton" accesskey="e" > ENVIAR</button>
 				</div>
 			</form>
 		</div>
