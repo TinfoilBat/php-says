@@ -20,10 +20,9 @@
 	require('function/f.php');
 
 	//Lo tendra que introducir el usuario
-	$nivel = 5;
+	$nivel = 10;
 
 	if ($nivel <= 9 and $nivel >=0 ) {
-		echo "esta entre 0 y 9";
 	} elseif ($nivel == 10) {
 		echo "<script> window.location.replace('victoria.php'); </script>";
 	} else {
