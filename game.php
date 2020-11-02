@@ -13,7 +13,10 @@
 	<?php
 	include('menu.php');
 	session_start();
-	$_SESSION['nombre'] = $_POST['nombre'];
+	if (!(isset($_SESSION["nombre"]))) {
+		$_SESSION['nombre'] = $_POST['nombre'];
+	}
+	
 	echo '<div class="nombre"> <p><i class="far fa-user"></i> ' . $_SESSION['nombre'] . '</p></div>';
 	?>
 	<?php
