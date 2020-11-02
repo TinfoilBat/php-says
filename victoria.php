@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VICTORIA</title>
-    <link rel="stylesheet" href="static/main.css">
-    <link rel="stylesheet" href="static/win.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/win.css">
 
 </head>
 <body>
