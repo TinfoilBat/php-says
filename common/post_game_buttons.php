@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SERVER['REQUEST_URI'] === '/php-says/src/victoria.php') {
+if ($_SERVER['REQUEST_URI'] === '/php-says/victoria.php') {
 	echo "
 
 	<div class='posicion espaciado centrado'>
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_URI'] === '/php-says/src/victoria.php') {
 	</div>
 </div>";
 }
-if ($_SERVER['REQUEST_URI'] === '/php-says/src/derrota.php') {
+if ($_SERVER['REQUEST_URI'] === '/php-says/derrota.php') {
 	echo "
 	
 	<div class='posicion espaciado centrado'>
