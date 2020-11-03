@@ -16,11 +16,11 @@ function vanishColor(){
 }
 
 // se muestran durantos los segundos
-function showCorrectCells4Seconds() {
+function showCorrectCellsSomeSeconds(seconds) {
 	revealColor();
 	setTimeout(() => {
 		vanishColor()
-	}, 4000);
+	}, seconds);
 }
 
 
@@ -31,37 +31,24 @@ function toggle(id) {
 		let element = document.getElementById(id);
 		element.classList.toggle('toggled');
 	}
-
 }
-function allowToggleOnCells() {
-	readyToPlay = true;
-	}
-
-
 // funcion que da clases cuando clicas
-function toogle(id) {
-	let element = document.getElementById(id);
-	if ((!(element.classList.contains('toogled'))) || (!(element.classList.contains('untoogled')))) {
-		element.classList.add('toogled')
-	}
-	else {
-		element.classList.remove('toogled')
-	}
-
-}
 
 // Recorre la tabla y hace que las celdas sean clicables
-function loadToogleOnCells() {
+function loadToggleOnCells() {
+	readyToPlay = true;
 	let elements = document.getElementsByTagName('td');
 	for (let i = 0; i < elements.length; i++) {
-		elements[i].addEventListener("click", toogle(elements[i].id));
+		elements[i].addEventListener("click", toggle());
 	}
 }
 
 // carga las celdas correctas y las ilumina (fallo)
-function startFanfare() {
-	loadToogleOnCells();
-	showCorrectCells4Seconds();
+function startFanfare(seconds) {
+	showCorrectCellsSomeSeconds(seconds);
+	setTimeout(() => {
+		loadToggleOnCells();
+	}, seconds);
 }
 
 
@@ -91,11 +78,7 @@ function postGame() {
 		window.location = 'victoria.php';
 	}
 	else {
-		window.location = 'derrota.php'
+		window.location = 'derrota.php';
 	}
 }
 
-function startFanfare() {
-	showCorrectCells4Seconds();
-	allowToggleOnCells();
- }

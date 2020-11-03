@@ -1,7 +1,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="static/main.css">
+	<link rel="stylesheet" href="styles/main.css">
 	<title>MENU</title>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
@@ -12,7 +12,16 @@
 <body>		
 	<div class="posicion letra">	
 		<div class="derecha">
-			<button class="boton" onclick="parent.location='index.php'">HOME</button>
+			<?php
+			session_start();
+			if ($_SERVER['REQUEST_URI'] === '/php-says/index.php') {
+				echo "<button class='boton espaciado' onclick=\"parent.location='index.php'\">RANKING</button>";
+				echo "<button class='boton espaciado' onclick=\"parent.location='index.php'\">INICIO</button>";
+			}
+			else {
+				echo "<button class='boton espaciado' onclick=\"parent.location='index.php'\">INICIO</button>";
+			}
+			?>
 		</div>
 	</div>
 </body>

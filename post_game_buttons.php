@@ -1,6 +1,6 @@
 
-    <div class="codigo centrado">
-        <p class="letra">Codigo de nivel : <?php echo $_SESSION['codigo']?></p>
+    <div class='codigo centrado'>
+        <p class='letra'>Codigo de nivel : <?php echo $_SESSION['codigo']?></p>
     </div>
 <div class="posicion espaciado centrado">
     <div>
