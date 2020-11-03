@@ -16,7 +16,6 @@
 		}
 		//TODO
 		if ($_SERVER['REQUEST_URI'] === '/php-says/victoria.php') {
-			$nextLevel = $nivel + 1;
 			echo "<div><form action='./game.php' method='POST'>
 						<button class='boton espaciado' type='submit' name= 'repeat' value=''  accesskey='r'>REPETIR</button>
 					</form>
