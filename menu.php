@@ -14,7 +14,7 @@
 		<div class="derecha">
 			<?php
 			session_start();
-			if ($_SERVER['REQUEST_URI'] === '/php-says/index.php' or $_SERVER['REQUEST_URI'] === '/php-says/') {
+			if ($_SERVER['REQUEST_URI'] === '/php-says/index.php') {
 				echo "<button class='boton espaciado' onclick=\"parent.location='ranking.php'\" accesskey='r'>RANKING</button>";
 				echo "<button class='boton espaciado' onclick=\"parent.location='index.php'\" accesskey='i'>INICIO</button>";
 			}
