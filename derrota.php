@@ -18,8 +18,6 @@
             <h3> NO HAS ACERTADO TODAS LAS CASILLAS </h3>
         </div>
     </div>
-        
-
 		<?php
 		include('post_game_buttons.php')
 		?>

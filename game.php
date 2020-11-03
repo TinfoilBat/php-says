@@ -13,15 +13,25 @@
 	<?php
 	include('menu.php');
 	session_start();
-	$_SESSION['nombre'] = $_POST['nombre'];
+	if (!(isset($_SESSION['nombre']))) {
+		$_SESSION['nombre'] = $_POST['nombre'];
+	}
 	echo '<div class="nombre"> <p><i class="far fa-user"></i> ' . $_SESSION['nombre'] . '</p></div>';
 	?>
 	<?php
 	require('function/f.php');
 
-	//Lo tendra que introducir el usuario
-	$nivel = 9;
+	//TODO
+	/* if ((isset($_POST['next']))) {
+		$nivel = $_POST['next'];
+	} else if ((isset($_POST['repeat']))) {
+		$nivel = $_POST['repeat'];
+	} else {
+	} */
+	
+	$nivel = 0;
 
+// Me da a mí que esto necesita una revisión, no me acaba de cuadrar el condicional, así de buenas a primeras
 	if ($nivel <= 9 and $nivel >=0 ) {
 	} elseif ($nivel == 10) {
 		echo "<script> window.location.replace('victoria.php'); </script>";
