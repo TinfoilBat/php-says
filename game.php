@@ -12,7 +12,7 @@
 <body>
 	<?php
 	include('menu.php');
-	session_start();
+	//session_start();
 	if (!(isset($_SESSION['nombre']))) {
 		$_SESSION['nombre'] = $_POST['nombre'];
 	}
