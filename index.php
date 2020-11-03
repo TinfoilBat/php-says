@@ -10,7 +10,7 @@
 <body class="letra inicio">
 	<?php
 	session_start();
-	include('common/menu.php');
+	include('menu.php');
 	?>
 
 
@@ -26,6 +26,7 @@
 		<p class="letra">A continuación aparecen todos los pasos a seguir del juego: </p>
 		<ol type="1">
 			<?php
+			echo "SESSION variable: " . $_SESSION["nombre"];
 			?>
 			<li>Primero de todo darle al botón de iniciar.</li>
 			<li>Esperar mientras se muestran las celdas de color amarillo.</li>
@@ -35,7 +36,7 @@
 			<li>El juego ya se ha terminado, si quieres empezar de nuevo darle al botón de HOME (arriba a la derecha) y volver a iniciar la partida.</li>
 		</ol>
 		<div class="centro">
-			<form method="POST" action="src/game.php">
+			<form method="POST" action="game.php">
 				<div>
 					<label for="nombre" minlength="1">Introduce tu nombre: </label>
 				</div>
@@ -44,16 +45,18 @@
 					if (isset($_SESSION["nombre"])) {
 						echo "<input type=\"text\" name=\"nombre\" value=\"{$_SESSION["nombre"]}\"required></input>";
 					} else {
-						session_destroy();
-						echo '<input type="text" id="nombre" name="nombre" required></input>';
+						echo "<input type=\"text\" name=\"nombre\" required></input>";
 					}
 					?>
 				</div>
 				<div>
-					<button class="boton" accesskey="e" > ENVIAR</button>
+					<button class="boton"> Enviar</button>
 				</div>
 			</form>
 		</div>
 	</div>
+
+
 </body>
+
 </html>

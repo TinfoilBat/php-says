@@ -1,0 +1,142 @@
+body {
+	background-color: #414b56;
+	justify-items: left;
+}
+
+pre {
+	font-family: 'Commissioner', sans-serif;
+	color: #ffffff;
+}
+
+.home {
+	background-color: #2774a6;
+}
+
+.text-white {
+	color: #ffffff ;
+	font-family: 'Krona One', sans-serif;
+}
+
+.nombre {
+	margin-left: 2rem;
+	color: #ffffff ;
+	font-family: 'Krona One', sans-serif;
+	text-align: center;
+}
+
+.derecha {
+	display: flex;
+	margin-right: 2rem;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.posicion {
+	margin: 2rem;
+	display: flex;	
+	align-content: space-between;
+}
+
+.letra {
+	font-family: 'Commissioner', sans-serif;
+	color: #ffffff;
+}
+
+.inicio {
+	margin-left: 2rem;
+}
+
+.boton {
+	background-color:#2774a6;
+	border-radius:3px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+}
+.boton:hover {
+	background-color:#019ad2;
+}
+.boton:active {
+	border-color:#2774a6 ;
+	top:1px;
+}
+
+.centro {
+	text-align: center;
+}
+
+.incorrect {
+	color: #ffffff;
+}
+
+.correct{
+	color: #ffffff;
+}
+
+.correctC {
+	background: #f4e04d;
+
+}
+
+.tabla {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+table.tablaJuego {
+	font-family: Verdana, Geneva, sans-serif;
+	width: 40rem;
+	height: 40rem;
+	text-align: center;
+	border-collapse: collapse;
+	margin: 3rem;
+}
+  table.tablaJuego td, table.tablaJuego th {
+	border: 2px solid #2774A6;
+	padding: 3px 3px;
+  }
+  table.tablaJuego tbody td {
+	font-size: 15px;
+  }
+  table.tablaJuego tfoot td {
+	font-size: 14px;
+  }
+  table.tablaJuego tfoot .links {
+	text-align: right;
+  }
+  table.tablaJuego tfoot .links a{
+	display: inline-block;
+	background: #1C6EA4;
+	color: #FFFFFF;
+	padding: 2px 8px;
+	border-radius: 5px;
+  }
+.espaciado {
+	margin: 1rem;
+}
+
+.toggled {
+    background: white;
+} 
+<<<<<<< Updated upstream:static/main.css
+=======
+
+.centrado {
+	justify-content: center;
+	margin-top: 5rem;
+	text-align: center;
+
+}
+
+.codigo {
+	margin-bottom: 1rem;
+}
+>>>>>>> Stashed changes:styles/main.css

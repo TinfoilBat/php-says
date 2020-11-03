@@ -29,7 +29,7 @@ function generateTable($height, $width, $correctCells)
 // Devuelve una lista de listas, en la que cada lista tiene su nivel
 function readFileConfig() {
 	$Niveles = array();
-	$Fichero = file('config/config.txt');
+	$Fichero = file('config.txt');
 	foreach($Fichero as $linea) {
 		$separados = explode("\r\n", $linea);
 		$nivel = explode(";", $linea);
