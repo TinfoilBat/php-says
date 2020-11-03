@@ -22,12 +22,12 @@
 	require('function/f.php');
 
 	//TODO
-	/* if ((isset($_POST['next']))) {
+	 if ((isset($_POST['next']))) {
 		$nivel = $_POST['next'];
 	} else if ((isset($_POST['repeat']))) {
 		$nivel = $_POST['repeat'];
 	} else {
-	} */
+	} 
 	
 	$nivel = 0;
 
