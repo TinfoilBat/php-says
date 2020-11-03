@@ -75,10 +75,10 @@ function solve() {
 function postGame() {
 	let result = solve();
 	if (result === true) {
-		window.location = 'victoria.php';
+		window.location = 'src/victoria.php';
 	}
 	else {
-		window.location = 'derrota.php';
+		window.location = 'src/derrota.php';
 	}
 }
 

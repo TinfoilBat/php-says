@@ -11,7 +11,7 @@
 
 <body>
 	<?php
-	include('menu.php');
+	include('common/menu.php');
 	session_start();
 	if (!(isset($_SESSION["nombre"]))) {
 		$_SESSION['nombre'] = $_POST['nombre'];
@@ -27,7 +27,7 @@
 
 	if ($nivel <= 9 and $nivel >=0 ) {
 	} elseif ($nivel == 10) {
-		echo "<script> window.location.replace('victoria.php'); </script>";
+		echo "<script> window.location.replace('common/victoria.php'); </script>";
 	} else {
 		die;
 	}
@@ -59,7 +59,7 @@
 </body>
 <footer>
 	<?php
-	include('game_buttons.html');
+	include('./common/game_buttons.html');
 	?>
 </footer>
 

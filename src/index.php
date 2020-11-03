@@ -35,7 +35,7 @@
 			<li>El juego ya se ha terminado, si quieres empezar de nuevo darle al botón de HOME (arriba a la derecha) y volver a iniciar la partida.</li>
 		</ol>
 		<div class="centro">
-			<form method="POST" action="game.php">
+			<form method="POST" action="src/game.php">
 				<div>
 					<label for="nombre" minlength="1">Introduce tu nombre: </label>
 				</div>
