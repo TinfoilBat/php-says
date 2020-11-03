@@ -59,7 +59,7 @@
 </body>
 <footer>
 	<?php
-	include('./common/game_buttons.html');
+	include('common/game_buttons.html');
 	?>
 </footer>
 
