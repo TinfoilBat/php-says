@@ -20,12 +20,8 @@
     </div>
         
 
-<<<<<<< Updated upstream
-
-=======
 		<?php
 		include('post_game_buttons.php')
 		?>
->>>>>>> Stashed changes
 </body>
 </html>
