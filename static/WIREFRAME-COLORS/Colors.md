@@ -1,6 +1,6 @@
 # PALETA DE COLORES
 
-![image-20201105161544733](C:\Users\David\AppData\Roaming\Typora\typora-user-images\image-20201105161544733.png)
+![../paletaColores.png](C:\Users\David\AppData\Roaming\Typora\typora-user-images\image-20201105161544733.png)
 
 ### FONDO - RGB : 65, 75, 86 - HEX : #414B56 - HSL : 211, 24%, 30%
 
@@ -20,7 +20,7 @@
 
 La tritanopia es la perdida de la paleta de los colores, consiste en la carencia de la sensibilidad del color azul.
 
-![image-20201105190712054](C:\Users\David\AppData\Roaming\Typora\typora-user-images\image-20201105190712054.png)
+![../daltonismo](C:\Users\David\AppData\Roaming\Typora\typora-user-images\image-20201105190712054.png)
 
 ### FONDO - RGB : 65, 75, 86 - HEX : #404C52  - HSL : 211°, 14%, 30%
 
@@ -33,10 +33,4 @@ La tritanopia es la perdida de la paleta de los colores, consiste en la carencia
 ### VICTORIA - RGB : 52, 141, 153 - HEX : #348D99 - HSL : 187°, 49%, 40%
 
 ### SELECCIONADO - RGB : 251, 244, 255 - HEX : #FBF4FF- HSL : 278°, 100%, 98%
-
-### 
-
-### 
-
-### 
 
