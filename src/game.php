@@ -1,45 +1,44 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style><?php include_once(dirname(__DIR__).'/styles/style.css');?></style> 
 	<title>JUEGO</title>
-	<script src="function/f.js"></script>
+	<script src="../function/f.js"></script>
+
 	<script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
 	<?php
-	include('menu.php');
-	//session_start();
+	include(dirname(__DIR__).'/common/header.php');
 	if (!(isset($_SESSION['nombre']))) {
+		$_SESSION['nombre'] = $_POST['nombre'];
+	}
+	if ($_SESSION['nombre'] !== $_POST['nombre']) {
+		session_destroy();
 		$_SESSION['nombre'] = $_POST['nombre'];
 	}
 	echo '<div class="nombre"> <p><i class="far fa-user"></i> ' . $_SESSION['nombre'] . '</p></div>';
 	?>
 	<?php
-	require('function/f.php');
-
-	//TODO
-	 if ((isset($_POST['next']))) {
-		$nivel = $_POST['next'];
-	} else if ((isset($_POST['repeat']))) {
-		$nivel = $_POST['repeat'];
-	} else {
-	} 
-	
+	require(dirname(__DIR__).'/function/f.php');
 	$nivel = 0;
 
 // Me da a mí que esto necesita una revisión, no me acaba de cuadrar el condicional, así de buenas a primeras
 	if ($nivel <= 9 and $nivel >=0 ) {
 	} elseif ($nivel == 10) {
-		echo "<script> window.location.replace('victoria.php'); </script>";
+		echo "<script> window.location.replace('./src/victoria.php'); </script>"; //check
 	} else {
 		die;
 	}
+
 	//Total de celdas segun el nivel
 	$Tceldas = readFileConfig()[$nivel][1][0] * readFileConfig()[$nivel][1][2];
+	//Para compensar que se genera un número más que las celdas que existen
+	$Tceldas -= 1;
 	//Num Celdas correctas 
 	$CeldasC = readFileConfig()[$nivel][2];
 	// Genera aleatoriamente los numeros de las celdas que son correctas
@@ -66,7 +65,7 @@
 </body>
 <footer>
 	<?php
-	include('game_buttons.html');
+	include(dirname(__DIR__).'/common/game_buttons.php');
 	?>
 </footer>
 

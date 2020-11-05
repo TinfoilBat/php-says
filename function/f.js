@@ -3,24 +3,28 @@ let readyToPlay = false;
 function revealColor() {
 	let elements = document.querySelectorAll('.correct')
 	for (let i = 0; i < elements.length; i++) {
-		elements[i].style.backgroundColor  = '#f4e04d';
+		elements[i].style.backgroundColor = '#f4e04d';
 	}
 }
 
 // hace que vuelva al color predeterminado despues de 4 sec
-function vanishColor(){
+function vanishColor() {
 	let elements = document.querySelectorAll('.correct');
 	for (let i = 0; i < elements.length; i++) {
-		elements[i].style.backgroundColor  = '';
+		elements[i].style.backgroundColor = '';
 	}
 }
 
 // se muestran durantos los segundos
 function showCorrectCellsSomeSeconds(seconds) {
-	revealColor();
-	setTimeout(() => {
-		vanishColor()
-	}, seconds);
+	if (readyToPlay == true) {
+		return 0
+	} else {
+		revealColor();
+		setTimeout(() => {
+			vanishColor()
+		}, seconds);
+	}
 }
 
 
@@ -32,7 +36,6 @@ function toggle(id) {
 		element.classList.toggle('toggled');
 	}
 }
-// funcion que da clases cuando clicas
 
 // Recorre la tabla y hace que las celdas sean clicables
 function loadToggleOnCells() {
@@ -41,6 +44,7 @@ function loadToggleOnCells() {
 	for (let i = 0; i < elements.length; i++) {
 		elements[i].addEventListener("click", toggle());
 	}
+
 }
 
 // carga las celdas correctas y las ilumina (fallo)
@@ -75,10 +79,10 @@ function solve() {
 function postGame() {
 	let result = solve();
 	if (result === true) {
-		window.location = 'victoria.php';
+		window.location = './victoria.php';
 	}
 	else {
-		window.location = 'derrota.php';
+		window.location = './derrota.php';
 	}
 }
 

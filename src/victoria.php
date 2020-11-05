@@ -1,27 +1,20 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>VICTORIA</title>
-	<link rel="stylesheet" href="styles/main.css">
-	<link rel="stylesheet" href="styles/win.css">
-
+	<style><?php include_once(dirname(__DIR__).'/styles/style.css');?></style> 
 </head>
-
 <body>
-	<?php include('menu.php');
-	?>
-
+	<?php include(dirname(__DIR__) . '/common/header.php'); ?>
 	<div class="win">
 		<div class="centro">
 			<h1> HAS GANADO</h1>
 			<h3> HAS ACERTADO TODAS LAS CASILLAS </h3>
 		</div>
 	</div>
-	<?php
-	include('post_game_buttons.php') ?>
+	<?php include(dirname(__DIR__) . '/common/post_game_buttons.php'); ?>
 </body>
-
 </html>

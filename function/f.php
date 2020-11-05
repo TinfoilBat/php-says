@@ -7,9 +7,8 @@ function uniqueRandomsInClusiveRange($min, $max, $quantity)
 	return array_slice($numbers, 0, $quantity);
 }
 
-function generateTable($height, $width, $correctCells)
-{
-	echo '<div class="centro tabla"><table class="letra tablaJuego">';
+function generateTable($height, $width, $correctCells) {
+	echo '<div><table>';
 	$counter = 0;
 	for ($i = 0; $i < $height; $i++) {
 		echo "<tr>";
@@ -28,19 +27,12 @@ function generateTable($height, $width, $correctCells)
 
 // Devuelve una lista de listas, en la que cada lista tiene su nivel
 function readFileConfig() {
-	$Niveles = array();
-	$Fichero = file('config.txt');
-	foreach($Fichero as $linea) {
+	$niveles = [];
+	$fichero = file(dirname(__DIR__).'/config/config.txt');
+	foreach($fichero as $linea) {
 		$separados = explode("\r\n", $linea);
 		$nivel = explode(";", $linea);
-		array_push($Niveles, $nivel);
-/*
-		echo "nivel: ";
-		print_r($nivel[0]);
-		echo "celdas: ";
-		print_r($nivel[2]);
-		echo '<br>';
-*/
+		array_push($niveles, $nivel);
 	}
-	return $x = $Niveles;
+	return $niveles;
 }

@@ -1,25 +1,21 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DERROTA</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/gameover.css">
+    <style><?php include_once(dirname(__DIR__).'/styles/style.css');?></style> 
 
 </head>
 <body>
-    <?php include('menu.php'); 
-    ?>
-
+    <?php include(dirname(__DIR__).'/common/header.php'); ?>
     <div class="GAMEOVER">
         <div class="centro">
             <h1> GAME OVER</h1>
             <h3> NO HAS ACERTADO TODAS LAS CASILLAS </h3>
         </div>
     </div>
-		<?php
-		include('post_game_buttons.php')
-		?>
+		<?php include(dirname(__DIR__).'/common/post_game_buttons.php'); ?>
 </body>
 </html>
