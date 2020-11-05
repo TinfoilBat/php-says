@@ -20,7 +20,7 @@
 
 La tritanopia es la perdida de la paleta de los colores, consiste en la carencia de la sensibilidad del color azul.
 
-![PaletaDeColores](https://raw.githubusercontent.com/TinfoilBat/php-says/production/static/assets/daltonismo.png)
+![PaletaDeColoresDaltonismo](https://raw.githubusercontent.com/TinfoilBat/php-says/production/static/assets/daltonismo.png)
 ### FONDO - RGB : 65, 75, 86 - HEX : #404C52  - HSL : 211°, 14%, 30%
 
 ### ACCESORIOS (BUTTONS, MENU) - RGB : 0, 122, 132 - HEX : #007A84 - HSL : 185°, 100%, 26%
