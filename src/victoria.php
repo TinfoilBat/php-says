@@ -5,7 +5,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>VICTORIA</title>
-	<style><?php include_once(dirname(__DIR__).'/styles/style.css');?></style> 
+	<style>
+        <?php include_once(dirname(__DIR__).'/styles/style.css');
+            include_once(dirname(__DIR__).'/styles/win.css');
+        ?>
+    </style> 
 </head>
 <body>
 	<?php include(dirname(__DIR__) . '/common/header.php'); ?>
