@@ -9,8 +9,8 @@ body {
   line-height: 1.618;
   max-width: 48em;
   margin: auto;
-  color: #c9c9c9;
-  background-color: #222222;
+  color: #FBF5F3 ;
+  background-color: #414B56 ;
   padding: 13px;
 }
 
@@ -221,11 +221,14 @@ input[type="reset"]:focus:enabled,
 input[type="reset"]:hover:enabled,
 input[type="button"]:focus:enabled,
 input[type="button"]:hover:enabled {
-  background-color: #c9c9c9;
+  background-color: #000000;
   border-color: #c9c9c9;
   color: #222222;
   outline: 0;
+
 }
+
+
 
 textarea,
 select,
