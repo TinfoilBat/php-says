@@ -1,6 +1,6 @@
 # PALETA DE COLORES
 
-![PaletaDeColores](https://raw.githubusercontent.com/TinfoilBat/php-says/production/static/assets/paletaColores.png)
+![PaletaDeColores](https://raw.githubusercontent.com/TinfoilBat/php-says/dvd_dev/static/assets/paletaColores.png)
 
 ### FONDO - RGB : 65, 75, 86 - HEX : #414B56 - HSL : 211, 24%, 30%
 
