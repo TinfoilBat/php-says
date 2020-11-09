@@ -5,8 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Victoria</title>
+	<link rel = "icon" href = "../static/icon.png" type = "image/x-icon">
 	<style>
-        <?php include_once(dirname(__DIR__).'/styles/style.css');
+		<?php include_once(dirname(__DIR__).'/styles/style.css');
             include_once(dirname(__DIR__).'/styles/win.css');
         ?>
     </style> 

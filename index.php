@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- PHP include for loading CSS in a PHP file-->
-	<style><?php include_once(dirname(__DIR__).'/styles/style.css');?></style> 
+	<style><?php include_once(dirname(__DIR__).'/styles/style.css');?></style>
+	<link rel = "icon" href =  "static/icon.png" type = "image/x-icon">
 	<title>PHP-SAYS</title>
 </head>
 
