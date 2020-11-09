@@ -8,7 +8,6 @@
 	<style><?php include_once(dirname(__DIR__).'/styles/style.css');?></style> 
 	<title>JUEGO</title>
 	<script src="../function/f.js"></script>
-
 	<script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -21,38 +20,39 @@
 		session_destroy();
 		$_SESSION['nombre'] = $_POST['nombre'];
 	}
+	$_SESSION['nivel'] = 0;
 	echo '<div class="nombre"> <p><i class="far fa-user"></i> ' . $_SESSION['nombre'] . '</p></div>';
 	?>
 	<?php
 	require(dirname(__DIR__).'/function/f.php');
-	$nivel = 0;
+	
 
-// Me da a mí que esto necesita una revisión, no me acaba de cuadrar el condicional, así de buenas a primeras
-	if ($nivel <= 9 and $nivel >=0 ) {
-	} elseif ($nivel == 10) {
+	// Me da a mí que esto necesita una revisión, no me acaba de cuadrar el condicional, así de buenas a primeras
+	/* if ($_SESSION['nivel'] <= 9 and $_SESSION['nivel'] >=0 ) {
+	} elseif ($_SESSION['nivel'] == 10) {
 		echo "<script> window.location.replace('./src/victoria.php'); </script>"; //check
 	} else {
 		die;
 	}
-
+	*/
 	//Total de celdas segun el nivel
-	$Tceldas = readFileConfig()[$nivel][1][0] * readFileConfig()[$nivel][1][2];
+	$Tceldas = readFileConfig()[$_SESSION['nivel']][1][0] * readFileConfig()[$_SESSION['nivel']][1][2];
 	//Para compensar que se genera un número más que las celdas que existen
 	$Tceldas -= 1;
 	//Num Celdas correctas 
-	$CeldasC = readFileConfig()[$nivel][2];
+	$CeldasC = readFileConfig()[$_SESSION['nivel']][2];
 	// Genera aleatoriamente los numeros de las celdas que son correctas
 	$rands = uniqueRandomsInClusiveRange(0, $Tceldas, $CeldasC);
 	//altura de la tabla
-	$hCeldas = readFileConfig()[$nivel][1][0];
+	$hCeldas = readFileConfig()[$_SESSION['nivel']][1][0];
 	//anchura de la tabla
-	$wCeldas = readFileConfig()[$nivel][1][2];
+	$wCeldas = readFileConfig()[$_SESSION['nivel']][1][2];
 	//Genera la tabla a partir de las variables definidas anteriormente
 	generateTable($hCeldas, $wCeldas, $rands);
 	//Determina los segundos que se muestran las celdas correctas
-	$segundos = readFileConfig()[$nivel][3] * 1000;
+	$segundos = readFileConfig()[$_SESSION['nivel']][3] * 1000;
 	//Codigo de nivel
-	$_SESSION['codigo'] = readFileConfig()[$nivel][4];
+	$_SESSION['codigo'] = readFileConfig()[$_SESSION['nivel']][4];
 	?>
 	
 	<!-- "Exporta" la variable de segundos a Javascript para que podamos jugar con ella desde ahí. -->
