@@ -1,12 +1,12 @@
 <style><?php include_once(dirname(__DIR__).'/styles/style.css');?></style> 
 <div>
-	<div>
+	<div class="menu">
 		<?php
 		if (($_SERVER['REQUEST_URI'] === '/php-says/index.php') || ($_SERVER['REQUEST_URI'] === '/php-says/')) {
-			echo "<button onclick=\"window.location.href='/php-says/index.php'\">INICIO</button>";
-			echo "<button onclick=\"window.location.href='/php-says/src/ranking.php'\">RANKING</button>";
+			echo "<button onclick=\"window.location.href='/php-says/index.php'\" accesskey='i'><u>I</u>NICIO</button>";
+			echo "<button onclick=\"window.location.href='/php-says/src/ranking.php'\" accesskey='r'><u>R</u>ANKING</button>";
 		 } else {
-			echo "<button onclick=\"window.location.href='/php-says/index.php'\">INICIO</button>";
+			echo "<button onclick=\"window.location.href='/php-says/index.php'\" accesskey='i'><u>I</u>NICIO</button>";
 			}
 		
 		?>

@@ -3,10 +3,11 @@
 <div>
 	<?php
 	if ($_SERVER['REQUEST_URI'] === '/php-says/src/derrota.php') {
+		echo $_SESSION['nombre'];
 		echo
 			"<div>
 				<form action='./game.php' method='POST'>
-					<button type='submit' name='repeat' accesskey='r'>REPETIR</button>
+					<button type='submit' name='nombre' value=\"{$_SESSION['nombre']}\" accesskey='r'><u>R</u>EPETIR</button>
 				</form>
 				</div>";
 	} ?>
@@ -15,12 +16,12 @@
 	<?php
 	if ($_SERVER['REQUEST_URI'] === '/php-says/src/victoria.php') {
 		echo "<div><form action='./game.php' method='POST'>
-						<button type='submit' name='repeat' accesskey='r'>REPETIR</button>
+						<button type='submit' name='nombre' value=\"{$_SESSION['nombre']}\" accesskey='r'><u>R</u>EPETIR</button>
 					</form>
 					</div>";
 
 		echo "<div><form action='./game.php' method='POST'>
-			<button type='submit' name='next' accesskey='s'>SIGUIENTE</button>
+			<button type='submit' name='next' value=\"{$_SESSION['nivel']}\" accesskey='s'><u>S</u>IGUIENTE</button>
 		</form>
 		</div>";
 	}
