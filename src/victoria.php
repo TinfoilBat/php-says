@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>VICTORIA</title>
+	<title>Victoria</title>
 	<style>
         <?php include_once(dirname(__DIR__).'/styles/style.css');
             include_once(dirname(__DIR__).'/styles/win.css');
@@ -13,6 +13,7 @@
 </head>
 <body>
 	<?php include(dirname(__DIR__) . '/common/header.php'); ?>
+	<center>
 	<div class="win">
 		<div class="centro">
 			<h1> HAS GANADO</h1>
@@ -20,5 +21,6 @@
 		</div>
 	</div>
 	<?php include(dirname(__DIR__) . '/common/post_game_buttons.php'); ?>
+</center>
 </body>
 </html>

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style><?php include_once(dirname(__DIR__).'/styles/style.css');?></style> 
-	<title>JUEGO</title>
+	<title>Memory-Game</title>
 	<script src="../function/f.js"></script>
 	<script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
 </head>
@@ -21,11 +21,11 @@
 		$_SESSION['nombre'] = $_POST['nombre'];
 	}
 	$_SESSION['nivel'] = 0;
-	echo '<div class="nombre"> <p><i class="far fa-user"></i> ' . $_SESSION['nombre'] . '</p></div>';
-	?>
-	<?php
 	require(dirname(__DIR__).'/function/f.php');
-	
+
+	echo '<div class="game"><center>';
+	echo '<div class="nombre"> <p><i class="far fa-user"></i> ' . $_SESSION['nombre'] . '</p></div>';
+	echo '<div class="nombre"> <p>NIVEL <i class="fas fa-layer-group"></i> : ' . readFileConfig()[$_SESSION['nivel']][4] . '</p></div>';
 
 	// Me da a mí que esto necesita una revisión, no me acaba de cuadrar el condicional, así de buenas a primeras
 	/* if ($_SESSION['nivel'] <= 9 and $_SESSION['nivel'] >=0 ) {
@@ -61,6 +61,8 @@
 	</script>
 	
 	<br>
+	<!-- Cierra el div con clase game -->
+	</div>
 
 </body>
 <footer>
@@ -68,5 +70,5 @@
 	include(dirname(__DIR__).'/common/game_buttons.php');
 	?>
 </footer>
-
+</center>
 </html>

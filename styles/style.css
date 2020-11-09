@@ -317,6 +317,10 @@ blockquote {
     display: flex;
   }
 
+  .flexboton {
+    display: flex;
+  }
+
   .descripcion {
     width: 50%;
   }
@@ -337,12 +341,26 @@ blockquote {
 
 /*----GAME----*/
   .game {
-    align-self: center;
+    margin-top: 2rem;
+    text-align: center;
+    justify-content: center;
   }
+
+/*----BOTONES----*/
+.botones {
+  margin-top: 4rem;
+  justify-content: center;
+  width: 100%;
+}
 
 
 @media only screen and (max-width:1920px) {
+  /*----GAME---*/
 
+  td, th {
+    height: 90px;
+    width: 90px;
+  }
 }
 
 @media only screen and (max-width:1366px) {
@@ -365,6 +383,14 @@ blockquote {
   .container3 {
     width: 10%;
   }
+
+  /*----GAME---*/
+
+  td, th {
+    height: 85px;
+    width: 85px;
+  }
+
 }
 
 @media only screen and (max-width:1024px) {
@@ -390,8 +416,46 @@ blockquote {
     width: 100%;
   }
 
-  @media only screen and (max-width:800px) {
+    /*----GAME---*/
 
+    td, th {
+      height: 80px;
+      width: 80px;
+    }
+  
+  }
+
+  @media only screen and (max-width:800px) {
+    /*----GAME---*/
+
+    td, th {
+      height: 50px;
+      width: 50px;
+    }
+  
+  }
+
+  @media only screen and (max-width:680px) {
+    td, th {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  @media only screen and (max-width:480px) {
+    td, th {
+      height: 30px;
+      width: 30px;
+    }
+    .flexboton {
+      display: block;
+    }
+
+    .botones {
+      margin-top: 2rem;
+      justify-content: center;
+      width: 100%;
+    }
   }
 
   @media only screen and (max-width:375px) {
