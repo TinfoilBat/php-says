@@ -354,6 +354,32 @@ blockquote {
 }
 
 
+/*----daltonico----*/
+.menud {
+  background-color: #252B2F;
+}
+
+body.daltonico {
+  background-color: #404C52  ;
+}
+
+button.daltonico {
+  background-color: #007A84 ;
+  color: #ffffff;
+  border: 1px solid #007A84  ;
+
+}
+button:focus.daltonico {
+  background-color: #009FAB;
+}
+
+button:hover.daltonico {
+  background-color: #009FAB;
+}
+
+
+
+
 @media only screen and (max-width:1920px) {
   /*----GAME---*/
 
