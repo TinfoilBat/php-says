@@ -175,7 +175,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  padding:8px 24px;
+  padding:8px 16px;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -185,7 +185,8 @@ input[type="button"] {
   border: 1px solid #2774A6 ;
   cursor: pointer;
   box-sizing: border-box;
-  margin-left: 5rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -291,6 +292,12 @@ blockquote {
   .icon {
     margin-top: 1rem;
     margin-left: 5rem;
+  }
+
+  .daltonicob {
+    margin-left: auto;
+    margin-right: 3rem;
+    padding:8px 12px;
   }
 /*----INDEX----*/
 
@@ -479,6 +486,9 @@ button:hover.daltonico {
       height: 40px;
       width: 40px;
     }
+    .icon{
+      margin-left: auto;
+    }
   }
 
   @media only screen and (max-width:480px) {
@@ -494,6 +504,20 @@ button:hover.daltonico {
       margin-top: 2rem;
       justify-content: center;
       width: 100%;
+    }
+
+    .icon{
+      margin-left: auto;
+    }
+
+    .button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+      margin-left: auto;
+    }
+  }
+
+  @media only screen and (max-width:430px) {
+    .icon {
+      width: 0px;
     }
   }
 
