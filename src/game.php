@@ -14,54 +14,46 @@
 <body>
 	<?php
 	include(dirname(__DIR__).'/common/header.php');
-	if (!(isset($_SESSION['nombre']))) {
-		$_SESSION['nombre'] = $_POST['nombre'];
-	}
-	if ($_SESSION['nombre'] !== $_POST['nombre']) {
-		session_destroy();
-		$_SESSION['nombre'] = $_POST['nombre'];
-	}
-	echo '<div class="nombre"> <p><i class="far fa-user"></i> ' . $_SESSION['nombre'] . '</p></div>';
-	?>
-	<?php
-	require(dirname(__DIR__).'/function/f.php');
-	$nivel = 0;
 
+	//ESto podríamos declararlo en f.php, y aquí redirigir a un nivel u otro en función de su valor, no de su existencia.
+	if (!(isset($_SESSION['playername']))) {
+		$_SESSION['playername'] = $_POST['playername'];
+	}
+	
+	echo '<div class="nombre"> <p><i class="far fa-user"></i> ' . $_SESSION['playername'] . '</p></div>';
+	
 // Me da a mí que esto necesita una revisión, no me acaba de cuadrar el condicional, así de buenas a primeras
-	if ($nivel <= 9 and $nivel >=0 ) {
-	} elseif ($nivel == 10) {
-		echo "<script> window.location.replace('./src/victoria.php'); </script>"; //check
-	} else {
-		die;
-	}
+	// if ($level <= 9 and $level >=0 ) {
+	// } elseif ($level == 10) {
+	// 	echo "<script> window.location.replace('./src/victoria.php'); </script>"; //check
+	// } else {
+	// 	die;
+	// }
 
-	//Total de celdas segun el nivel
-	$Tceldas = readFileConfig()[$nivel][1][0] * readFileConfig()[$nivel][1][2];
+	//Total de celdas segun el level
+	$Tceldas = readFileConfig()[$level][1][0] * readFileConfig()[$level][1][2];
 	//Para compensar que se genera un número más que las celdas que existen
 	$Tceldas -= 1;
 	//Num Celdas correctas 
-	$CeldasC = readFileConfig()[$nivel][2];
+	$CeldasC = readFileConfig()[$level][2];
 	// Genera aleatoriamente los numeros de las celdas que son correctas
 	$rands = uniqueRandomsInClusiveRange(0, $Tceldas, $CeldasC);
 	//altura de la tabla
-	$hCeldas = readFileConfig()[$nivel][1][0];
+	$hCeldas = readFileConfig()[$level][1][0];
 	//anchura de la tabla
-	$wCeldas = readFileConfig()[$nivel][1][2];
+	$wCeldas = readFileConfig()[$level][1][2];
 	//Genera la tabla a partir de las variables definidas anteriormente
 	generateTable($hCeldas, $wCeldas, $rands);
 	//Determina los segundos que se muestran las celdas correctas
-	$segundos = readFileConfig()[$nivel][3] * 1000;
-	//Codigo de nivel
-	$_SESSION['codigo'] = readFileConfig()[$nivel][4];
+	$segundos = readFileConfig()[$level][3] * 1000;
+	//Codigo de level
+	$_SESSION['codigo'] = readFileConfig()[$level][4];
 	?>
-	
-	<!-- "Exporta" la variable de segundos a Javascript para que podamos jugar con ella desde ahí. -->
+	<!-- "Exporta" variables a Javascript para que podamos jugar con ellas desde ahí.
+	seconds está para que reciba el tiempo en que se muestran las celdas correctas desde PHP. Luego la usamos en la función de JS que se encarga precisamente de eso: mostrar las correctas al hacer click en empezar -->
 	<script type="text/javascript">
 		let seconds = <?php echo json_encode($segundos, JSON_HEX_TAG); ?>;
 	</script>
-	
-	<br>
-
 </body>
 <footer>
 	<?php

@@ -1,4 +1,9 @@
 <?php
+session_start();
+
+//TODO: Init all superglobals here to avoid null asignments and manage state across pages, regardless of reloads. See https://stackoverflow.com/questions/4261133/notice-undefined-variable-notice-undefined-index-and-notice-undefined
+$level = $_SESSION['level'] ?? 0;
+$tries = $_SESSION['try'] ?? 0;
 
 function uniqueRandomsInClusiveRange($min, $max, $quantity)
 {
@@ -35,4 +40,11 @@ function readFileConfig() {
 		array_push($niveles, $nivel);
 	}
 	return $niveles;
+}
+
+function calculatePoints($timeSpent, $tries, $level) {
+	$seconds = readFileConfig()[$level][3] * 1000;
+	$points = ((1000 - $timeSpent) + $level * $seconds)/$tries;
+
+	return $points;
 }

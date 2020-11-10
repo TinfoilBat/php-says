@@ -11,9 +11,6 @@
 
 <body>
 	<?php
-	// if (!(isset($_SESSION["nombre"]))) {
-	// 	$_SESSION["nombre"] = $_POST["nombre"];
-	// }
 	include(__DIR__.'/common/header.php');
 
 	?>
@@ -42,16 +39,16 @@
 				</div>
 				<div>
 					<?php
-					if (isset($_SESSION["nombre"])) {
-						echo "<input type=\"text\" id = \"nombre\" name=\"nombre\" value=\"{$_SESSION["nombre"]}\"required></input>";
+					if (isset($_SESSION["playername"])) {
+						echo "<input type=\"text\" id = \"playername\" name=\"playername\" value=\"{$_SESSION["playername"]}\"required></input>";
 					} else {
-						echo "<input type=\"text\" id = \"nombre\" name=\"nombre\" required></input>";
+						session_reset();
+						echo "<input type=\"text\" id = \"playername\" name=\"playername\" required></input>";
 					}
 					?>
 				</div>
 				<div>
 					<button accesskey="e"> ENVIAR</button>
-					
 				</div>
 			</form>
 		</div>
