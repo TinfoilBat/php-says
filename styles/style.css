@@ -511,7 +511,7 @@ button:hover.daltonico {
     }
 
     .button, button, input[type="submit"], input[type="reset"], input[type="button"] {
-      margin-left: auto;
+      margin-left: 0.5rem;
     }
   }
 
