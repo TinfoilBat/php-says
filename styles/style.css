@@ -12,18 +12,6 @@ body {
   background-color: #414B56 ;
 }
 
-@media (max-width: 684px) {
-  body {
-    font-size: 1.53rem;
-  }
-}
-
-@media (max-width: 382px) {
-  body {
-    font-size: 1.35rem;
-  }
-}
-
 h1,
 h2,
 h3,
@@ -337,6 +325,7 @@ blockquote {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
   }
 
 /*----GAME----*/
@@ -377,7 +366,31 @@ button:hover.daltonico {
   background-color: #009FAB;
 }
 
+/*----RANKING----*/
+.containter4 {
+  width: 10%;
+}
 
+.ranking {
+  margin-top: 1rem;
+  width: 80%;
+}
+
+.rankingth {
+  background-color: #ffffff;
+  color: #2774A6;
+  width: auto;
+  height: auto;
+  text-align: center;
+  border-color: #2774A6;
+}
+
+.rankingtd {
+  width: auto;
+  height: auto;
+  text-align: center;
+  border-color: #2774A6;
+}
 
 
 @media only screen and (max-width:1920px) {
