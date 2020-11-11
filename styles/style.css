@@ -250,6 +250,7 @@ fieldset {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  margin-left: 1rem;
 }
 
 blockquote {
@@ -276,7 +277,7 @@ blockquote {
 }
 
 .container2 {
-  width: 25%;
+  width: 20%;
 }
 
 .container3 {
@@ -295,6 +296,7 @@ blockquote {
   }
 
   .daltonicob {
+    margin-top: 1rem;
     margin-left: auto;
     margin-right: 3rem;
     padding:8px 12px;
@@ -325,7 +327,7 @@ blockquote {
   }
 
   .instrucciones {
-    width: 50%;
+    width: 60%;
   }
 
   .centro {
@@ -351,12 +353,38 @@ blockquote {
 
 
 /*----daltonico----*/
-.menud {
+.menu.daltonico {
   background-color: #252B2F;
+}
+
+blockquote.daltonico {
+  background-color: #404C52  ;
 }
 
 body.daltonico {
   background-color: #404C52  ;
+}
+
+.rankingth.daltonico {
+    background-color: #FBF4FF;
+    color: #007A84 ;
+    border-color: #007A84 ;
+} 
+
+.rankingtd.daltonico {
+  border-color: #007A84;
+}
+
+.GAMEOVER.daltonico {
+  color: #CE5055;
+}
+
+.win.daltonico {
+  color: #348D99;
+}
+
+.toggled.daltonico {
+	background-color: #FBF5F3 ;
 }
 
 button.daltonico {

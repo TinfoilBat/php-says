@@ -1,9 +1,18 @@
 let readyToPlay = false;
+let daltonico = false;
 
-function revealColor() {
-	let elements = document.querySelectorAll('.correct')
-	for (let i = 0; i < elements.length; i++) {
-		elements[i].style.backgroundColor = '#f4e04d';
+
+function revealColor(daltonico) {
+	if (daltonico == true) {
+		let elements = document.querySelectorAll('.correct');
+		for (let i = 0; i < elements.length; i++) {
+			elements[i].style.backgroundColor = '#FFD2E2';
+		}
+	} else {
+		let elements = document.querySelectorAll('.correct');
+		for (let i = 0; i < elements.length; i++) {
+			elements[i].style.backgroundColor = '#F4E04D ';
+		}
 	}
 }
 
@@ -20,7 +29,7 @@ function showCorrectCellsSomeSeconds(seconds) {
 	if (readyToPlay == true) {
 		return 0
 	} else {
-		revealColor();
+		revealColor(daltonico);
 		setTimeout(() => {
 			vanishColor()
 		}, seconds);
