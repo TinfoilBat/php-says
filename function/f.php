@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-//TODO: Init all superglobals here to avoid null asignments and manage state across pages, regardless of reloads. See https://stackoverflow.com/questions/4261133/notice-undefined-variable-notice-undefined-index-and-notice-undefined
-$_SESSION['level'] = 0;
-$_SESSION['try'] = 0;
-$_SESSION['level'] = 0;
-
 function uniqueRandomsInClusiveRange($min, $max, $quantity)
 {
 	$numbers = range($min, $max);
@@ -76,19 +71,6 @@ function generateRanking()
 		echo '</tr>';
 	}
 }
-
-function checkPlayerExistence($playerName)
-{
-	$wholeRanking = readFileRanking();
-	foreach ($wholeRanking as $linea) {
-		if (key_exists($playerName, $linea)) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-}
-
 function writePointsInRanking($playerName, $points) {
 	$ranking = fopen(dirname(__DIR__) . '/config/ranking.txt', 'a+');
 	fwrite($ranking, $playerName);

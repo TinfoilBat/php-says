@@ -16,14 +16,14 @@
 
 <body>
 	<?php include(dirname(__DIR__) . '/common/header.php'); ?>
-	<center>
-		<div class="win">
-			<div class="centro">
-				<h1> HAS GANADO</h1>
-				<h3> HAS ACERTADO TODAS LAS CASILLAS </h3>
-				<h4>Tu tiempo: <?php echo $_POST['final_time'] . ' segundos <br>' ?></h4><br>
-				<h4>Tu código de nivel: <?php echo $_SESSION['codigo'] ?> </h4><br>
-			</div>
+	<div class="win">
+		<center>
+		<div class="centro">
+			<h1> HAS GANADO</h1>
+			<h3> HAS ACERTADO TODAS LAS CASILLAS </h3>
+			<h4>Tu tiempo: <?php echo $_POST['victory_final_time'] . ' segundos <br>' ?></h4><br>
+			<h4>Tu código de nivel: <?php echo $_SESSION['codigo'] ?> </h4><br>
+			<h4>Intentos realizados por este nivel: <?php echo $_SESSION['tries'] ?> </h4>
 		</div>
 		<?php include(dirname(__DIR__) . '/common/post_game_buttons.php'); ?>
 	</center>
