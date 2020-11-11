@@ -24,7 +24,6 @@
 	<?php
 	if ($_SERVER['REQUEST_URI'] === '/php-says/src/victoria.php') {
 		$_SESSION['tries']++;
-		echo $_SESSION['level'];
 
 		echo "<div class='flexboton botones'><form action='./game.php' method='POST'>
 						<button id='daltonico' type='submit' name='repeat' accesskey='r'><u>R</u>EPETIR</button>

@@ -1,11 +1,8 @@
 let readyToPlay = false;
-<<<<<<< HEAD
 let daltonico = false;
-=======
 let initialTime = 0;
 let completionTime = 0;
 let tries = 0;
->>>>>>> origin/preprod
 
 
 function revealColor(daltonico) {

@@ -15,11 +15,8 @@
 </head>
 
 <body>
-<<<<<<< HEAD
 	<audio autoplay src="cambio.mp3"></audio>
-=======
 	<center>
->>>>>>> origin/preprod
 	<?php
 	include(dirname(__DIR__) . '/common/header.php');
 
@@ -57,13 +54,8 @@
 	//Codigo de level
 	$_SESSION['codigo'] = readFileConfig()[$_SESSION['level']][4];
 	?>
-<<<<<<< HEAD
-
-	<!-- "Exporta" la variable de segundos a Javascript para que podamos jugar con ella desde ahí. -->
-=======
 	<!-- "Exporta" variables a Javascript para que podamos jugar con ellas desde ahí.
 	seconds está para que reciba el tiempo en que se muestran las celdas correctas desde PHP. Luego la usamos en la función de JS que se encarga precisamente de eso: mostrar las correctas al hacer click en empezar -->
->>>>>>> origin/preprod
 	<script type="text/javascript">
 		let seconds = <?php echo json_encode($segundos, JSON_HEX_TAG); ?>;
 	</script>
