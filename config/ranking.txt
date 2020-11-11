@@ -1,3 +1,2 @@
 david;1000
 ruben;2000
-daiv;3000\n
