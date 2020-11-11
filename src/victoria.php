@@ -20,6 +20,7 @@
 			<h1> HAS GANADO</h1>
 			<h3> HAS ACERTADO TODAS LAS CASILLAS </h3>
 		</div>
+		<audio autoplay src="acierto.mp3"></audio>
 	</div>
 	<?php include(dirname(__DIR__) . '/common/post_game_buttons.php'); ?>
 </center>

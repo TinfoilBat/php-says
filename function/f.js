@@ -95,3 +95,37 @@ function postGame() {
 	}
 }
 
+function addClassAllDocument() {
+	daltonico = true;
+	var all = document.getElementsByTagName("*");
+	for (var i=0, max=all.length; i < max; i++) {
+		all[i].classList.add("daltonico");
+	}
+
+}
+function removeClassAllDocument() {
+	var all = document.getElementsByTagName("*");
+	for (var i=0, max=all.length; i < max; i++) {
+	all[i].classList.remove("daltonico");
+	}
+}
+
+function on(){
+addClassAllDocument();
+}
+
+function off(){
+removeClassAllDocument();
+}
+
+var checkbox = document.getElementById('checkbox');
+
+checkbox.addEventListener("change", comprueba, false);
+
+function comprueba(){
+if(checkbox.checked){
+  on();
+}else{
+ off();
+}
+}

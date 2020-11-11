@@ -9,6 +9,7 @@
 	<link rel = "icon" href =  "../static/icon.png" type = "image/x-icon">
 </head>
 <body>
+	<audio autoplay src="cambio.mp3"></audio>
 	<?php include(dirname(__DIR__).'/common/header.php'); ?>
 	<div class="main">
 		<div class="">

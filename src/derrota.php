@@ -21,6 +21,7 @@
                 <h1> GAME OVER</h1>
                 <h3> NO HAS ACERTADO TODAS LAS CASILLAS </h3>
             </div>
+            <audio autoplay src="fallo.mp3"></audio>
         </div>
         <?php ?>
             <?php include(dirname(__DIR__).'/common/post_game_buttons.php'); ?>

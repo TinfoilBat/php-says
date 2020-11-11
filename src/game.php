@@ -12,6 +12,7 @@
 	<script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+	<audio autoplay src="cambio.mp3"></audio>
 	<?php
 	include(dirname(__DIR__).'/common/header.php');
 	if (!(isset($_SESSION['nombre']))) {
@@ -55,7 +56,7 @@
 	//Codigo de nivel
 	$_SESSION['codigo'] = readFileConfig()[$_SESSION['nivel']][4];
 	?>
-	
+
 	<!-- "Exporta" la variable de segundos a Javascript para que podamos jugar con ella desde ahí. -->
 	<script type="text/javascript">
 		let seconds = <?php echo json_encode($segundos, JSON_HEX_TAG); ?>;

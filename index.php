@@ -11,6 +11,7 @@
 </head>
 
 <body>
+	<audio autoplay src="src/cambio.mp3"></audio>
 	<?php
 	include(__DIR__.'/common/header.php');
 
@@ -76,8 +77,8 @@
                         $_SESSION['nivel'] = 0;
                     }
 					?>
-					<button accesskey="e"><u>E</u>NVIAR</button>
-			</form>
+					<button accesskey="e" ><u>E</u>NVIAR</button>
+				</form>
 		</div>
 	</div>
 </body>
