@@ -25,7 +25,9 @@
 					<th class="rankingth">POINTS</th>
 				</tr>
 					<?php
-						require(dirname(__DIR__).'/function/f.php');
+					//This shit right here will explode 50% of the time...
+						$playerPoints = calculatePoints($_POST['final_time'], $_SESSION['tries'],$_SESSION['level']);
+						writePointsInRanking($_SESSION['playername'], $playerPoints);
 						generateRanking();
 					?>
 				</table>

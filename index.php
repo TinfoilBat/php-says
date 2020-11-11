@@ -14,7 +14,6 @@
 	<audio autoplay src="src/cambio.mp3"></audio>
 	<?php
 	include(__DIR__.'/common/header.php');
-
 	?>
 	<div class="main">
 		<div>
@@ -65,16 +64,17 @@
 			<form method="POST" action="src/game.php">
 					<label for="nombre" minlength="1">Introduce tu nombre:</label>
 					<?php
-					if (isset($_SESSION["nombre"])) {
-						echo "<input type=\"text\" id = \"nombre\" name=\"nombre\" value=\"{$_SESSION["nombre"]}\" required></input>";
+					if (isset($_SESSION["playername"])) {
+						echo "<input type=\"text\" id = \"playername\" name=\"playername\" value=\"{$_SESSION["playername"]}\"required></input>";
 					} else {
-						echo "<input type=\"text\" id = \"nombre\" name=\"nombre\" required></input>";
+						session_reset();
+						echo "<input type=\"text\" id = \"playername\" name=\"playername\" required></input>";
 					}
 					
-					if (isset($_SESSION['nivel'])) {
-                        $_SESSION['nivel'] += 0;
+					if (isset($_SESSION['level'])) {
+                        $_SESSION['level'] += 0;
                     } else {
-                        $_SESSION['nivel'] = 0;
+                        $_SESSION['level'] = 0;
                     }
 					?>
 					<button accesskey="e" ><u>E</u>NVIAR</button>

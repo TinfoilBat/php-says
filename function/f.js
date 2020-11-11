@@ -1,5 +1,11 @@
 let readyToPlay = false;
+<<<<<<< HEAD
 let daltonico = false;
+=======
+let initialTime = 0;
+let completionTime = 0;
+let tries = 0;
+>>>>>>> origin/preprod
 
 
 function revealColor(daltonico) {
@@ -25,14 +31,14 @@ function vanishColor() {
 }
 
 // se muestran durantos los segundos
-function showCorrectCellsSomeSeconds(seconds) {
+function showCorrectCellsSomedelay(timeout) {
 	if (readyToPlay == true) {
 		return 0
 	} else {
 		revealColor(daltonico);
 		setTimeout(() => {
 			vanishColor()
-		}, seconds);
+		}, timeout);
 	}
 }
 
@@ -56,12 +62,16 @@ function loadToggleOnCells() {
 
 }
 
-// carga las celdas correctas y las ilumina (fallo)
-function startFanfare(seconds) {
-	showCorrectCellsSomeSeconds(seconds);
+// carga las celdas correctas y las ilumina. También comunica de manera global mediante booleano si ha sido llamada , para luego ejecutar un timestamp.
+function startFanfare(timeout) {
+	showCorrectCellsSomedelay(timeout);
 	setTimeout(() => {
 		loadToggleOnCells();
-	}, seconds);
+	}, timeout);
+	setTimeout(() => {
+		initialTime = createTimestampInSeconds();
+	}, timeout);
+
 }
 
 
@@ -88,11 +98,18 @@ function solve() {
 function postGame() {
 	let result = solve();
 	if (result === true) {
-		window.location = './victoria.php';
+		let stats = fillFormData('victory');
+		stats.submit();
 	}
 	else {
-		window.location = './derrota.php';
+		let stats = fillFormData('fail');
+		stats.submit();
 	}
+
+}
+
+function createTimestampInSeconds(){
+	return Math.floor(Date.now() / 1000);
 }
 
 function addClassAllDocument() {
@@ -129,3 +146,15 @@ if(checkbox.checked){
  off();
 }
 }
+function fillFormData(form_id) {
+	completionTime = createTimestampInSeconds();
+	let finalTime = completionTime - initialTime;
+	//This solution below is horrible
+	document.getElementById(form_id +'_final_time').value = finalTime;
+	document.getElementById(form_id +'_tries').value = tries;	
+	let form = document.getElementById(form_id)
+
+	return form;
+}
+
+

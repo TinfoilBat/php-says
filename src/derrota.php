@@ -1,6 +1,7 @@
-<?php session_start();?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     </style> 
 
 </head>
+
 <body>
     <?php include(dirname(__DIR__).'/common/header.php'); ?>
     <center>
@@ -23,8 +25,11 @@
             </div>
             <audio autoplay src="fallo.mp3"></audio>
         </div>
+        <h4>Tu código de nivel: <?php echo $_SESSION['codigo'] ?> </h4><br>
         <?php ?>
             <?php include(dirname(__DIR__).'/common/post_game_buttons.php'); ?>
     </center>
+	
 </body>
+
 </html>
