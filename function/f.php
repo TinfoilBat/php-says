@@ -2,8 +2,9 @@
 session_start();
 
 //TODO: Init all superglobals here to avoid null asignments and manage state across pages, regardless of reloads. See https://stackoverflow.com/questions/4261133/notice-undefined-variable-notice-undefined-index-and-notice-undefined
-$level = $_SESSION['level'] ?? 0;
-$tries = $_SESSION['try'] ?? 0;
+$_SESSION['level'] = 0;
+$_SESSION['try'] = 0;
+$_SESSION['level'] = 0;
 
 function uniqueRandomsInClusiveRange($min, $max, $quantity)
 {
@@ -12,7 +13,8 @@ function uniqueRandomsInClusiveRange($min, $max, $quantity)
 	return array_slice($numbers, 0, $quantity);
 }
 
-function generateTable($height, $width, $correctCells) {
+function generateTable($height, $width, $correctCells)
+{
 	echo '<div><table>';
 	$counter = 0;
 	for ($i = 0; $i < $height; $i++) {
@@ -31,10 +33,11 @@ function generateTable($height, $width, $correctCells) {
 }
 
 // Devuelve una lista de listas, en la que cada lista tiene su nivel
-function readFileConfig() {
+function readFileConfig()
+{
 	$niveles = [];
-	$fichero = file(dirname(__DIR__).'/config/config.txt');
-	foreach($fichero as $linea) {
+	$fichero = file(dirname(__DIR__) . '/config/config.txt');
+	foreach ($fichero as $linea) {
 		$separados = explode("\r\n", $linea);
 		$nivel = explode(";", $linea);
 		array_push($niveles, $nivel);
@@ -42,17 +45,21 @@ function readFileConfig() {
 	return $niveles;
 }
 
-function calculatePoints($timeSpent, $tries, $level) {
+function calculatePoints($timeSpent, $tries, $level)
+{
 	$seconds = readFileConfig()[$level][3] * 1000;
-	$points = ((1000 - $timeSpent) + $level * $seconds)/$tries;
+	$points = ((1000 - $timeSpent) + $level * $seconds) / $tries;
 
 	return $points;
 }
+
+
 // Devulve un array de arrays, cada array que esta dentro del array grande tiene en una posicion el usuario y en la otra los puntos
-function readFileRanking() {
-	$file = file(dirname(__DIR__).'/config/ranking.txt');
+function readFileRanking()
+{
+	$file = file(dirname(__DIR__) . '/config/ranking.txt');
 	$alluser = [];
-	foreach($file as $linea) {
+	foreach ($file as $linea) {
 		$userPoints = explode("\r\n", $linea);
 		$up = explode(";", $linea);
 		array_push($alluser, $up);
@@ -60,11 +67,31 @@ function readFileRanking() {
 	return $alluser;
 }
 // Genera la tabla a traves del fichero de configuracion (funcion readFileRanking())
-function generateRanking() {
+function generateRanking()
+{
 	for ($i = 0; $i < sizeof(readFileRanking()); $i++) {
 		echo '<tr>';
 		echo '<td class="rankingtd">' . readFileRanking()[$i][0] . '</td>';
 		echo '<td class="rankingtd">' . readFileRanking()[$i][1] . '</td>';
 		echo '</tr>';
 	}
+}
+
+function checkPlayerExistence($playerName)
+{
+	$wholeRanking = readFileRanking();
+	foreach ($wholeRanking as $linea) {
+		if (key_exists($playerName, $linea)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+function writePointsInRanking($playerName, $points) {
+	$ranking = fopen(dirname(__DIR__) . '/config/ranking.txt', 'a+');
+	fwrite($ranking, $playerName);
+	fwrite($ranking, ";");
+	fwrite($ranking, $points . '\n');
 }

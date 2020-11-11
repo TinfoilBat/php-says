@@ -24,7 +24,6 @@
 					<th class="rankingth">POINTS</th>
 				</tr>
 					<?php
-						require(dirname(__DIR__).'/function/f.php');
 						generateRanking();
 					?>
 				</table>

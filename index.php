@@ -13,7 +13,6 @@
 <body>
 	<?php
 	include(__DIR__.'/common/header.php');
-
 	?>
 	<div class="main">
 		<div>

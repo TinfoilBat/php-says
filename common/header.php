@@ -1,7 +1,7 @@
 <?php session_start();?>
 <style><?php include_once(dirname(__DIR__).'/styles/style.css');?></style> 
+<?php require(dirname(__DIR__).'/function/f.php');?>
 <div class="menu">
-
 	<div class="flex">
 		<?php
 			if (($_SERVER['REQUEST_URI'] === '/php-says/index.php') || ($_SERVER['REQUEST_URI'] === '/php-says/')) {

@@ -103,8 +103,9 @@ function createTimestampInSeconds(){
 function fillFormData(form_id) {
 	completionTime = createTimestampInSeconds();
 	let finalTime = completionTime - initialTime;
-	document.getElementById('final_time').value = finalTime;
-	document.getElementById('tries').value = tries;
+	//This solution below is horrible
+	document.getElementById(form_id +'_final_time').value = finalTime;
+	document.getElementById(form_id +'_tries').value = tries;	
 	let form = document.getElementById(form_id)
 
 	return form;
