@@ -3,8 +3,8 @@
 </style>
 <script src="../function/f.js"></script>
 <div>
-	<button onclick="startFanfare(seconds)" accesskey="e">EMPEZAR</button>
-	<button onclick="postGame()" accesskey="r">RESOLVER </button>
+	<button onclick="startFanfare(seconds)" accesskey="e"><u>E</u>MPEZAR</button>
+	<button onclick="postGame()" accesskey="r"><u>R</u>ESOLVER </button>
 </div>
 
 <!-- Hidden POST form to pass certain time counting JS variables to PHP -->

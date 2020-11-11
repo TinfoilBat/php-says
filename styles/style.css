@@ -7,23 +7,9 @@ html {
 body {
   font-size: 1.8rem;
   line-height: 1.618;
-  max-width: 48em;
   margin: auto;
-  color: #c9c9c9;
-  background-color: #222222;
-  padding: 13px;
-}
-
-@media (max-width: 684px) {
-  body {
-    font-size: 1.53rem;
-  }
-}
-
-@media (max-width: 382px) {
-  body {
-    font-size: 1.35rem;
-  }
+  color: #FBF5F3 ;
+  background-color: #414B56 ;
 }
 
 h1,
@@ -126,7 +112,6 @@ video {
   height: auto;
   max-width: 100%;
   margin-top: 0px;
-  margin-bottom: 2.5rem;
 }
 
 /* Pre and Code */
@@ -155,15 +140,15 @@ pre > code {
 /* Tables */
 table {
   text-align: justify;
-  width: 100%;
   border-collapse: collapse;
-  border: #4a4a4a 2px solid;
+  border: #FBF5F3 2px solid;
 }
 
-td,
-th {
+td, th {
   padding: 0.5em;
-  border: #4a4a4a 2px solid;
+  border: #FBF5F3 2px solid;
+  height: 60px;
+  width: 60px;
 }
 
 .toggled {
@@ -190,16 +175,20 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  padding: 5px 10px;
+  padding:8px 16px;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #ffffff;
-  color: #222222;
-  border-radius: 1px;
-  border: 1px solid #ffffff;
+  background-color: #2774A6;
+  color: #ffffff;
+  border-radius: 3px;
+  border: 1px solid #2774A6 ;
   cursor: pointer;
   box-sizing: border-box;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .button[disabled],
@@ -221,21 +210,24 @@ input[type="reset"]:focus:enabled,
 input[type="reset"]:hover:enabled,
 input[type="button"]:focus:enabled,
 input[type="button"]:hover:enabled {
-  background-color: #c9c9c9;
+  background-color: #019ad2;
   border-color: #c9c9c9;
-  color: #222222;
+  color: #ffffff;
   outline: 0;
+
 }
+
+
 
 textarea,
 select,
 input {
-  color: #c9c9c9;
+  color: #000000;
   padding: 6px 10px;
   /* The 6px vertically centers text on FF, ignored by Webkit */
   margin-bottom: 10px;
-  background-color: #4a4a4a;
-  border: 1px solid #4a4a4a;
+  background-color: #c9c9c9;
+  border: 1px solid #c9c9c9;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
@@ -259,3 +251,276 @@ fieldset {
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
+
+blockquote {
+  background-color: #414B56;
+  text-align: justify;
+}
+
+/*----HEADER----*/
+
+.menu {
+  background-color: #252B30;
+}
+.icon {
+  margin-left: 5rem;
+}
+
+/*----TAMAÑOS----*/
+.container20 {
+  width: 20%;
+}
+
+.container1 {
+  width: 20%;
+}
+
+.container2 {
+  width: 25%;
+}
+
+.container3 {
+  width: 20%;
+}
+
+.container50 {
+  width: 50%;
+}
+
+
+/*---MENU---*/
+  .icon {
+    margin-top: 1rem;
+    margin-left: 5rem;
+  }
+
+  .daltonicob {
+    margin-left: auto;
+    margin-right: 3rem;
+    padding:8px 12px;
+  }
+/*----INDEX----*/
+
+  .main {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flexboton {
+    display: flex;
+  }
+
+  .descripcion {
+    width: 50%;
+  }
+
+  .imagen {
+    width: 45%;
+  }
+
+  .instrucciones {
+    width: 50%;
+  }
+
+  .centro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+/*----GAME----*/
+  .game {
+    margin-top: 2rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+/*----BOTONES----*/
+.botones {
+  margin-top: 4rem;
+  justify-content: center;
+  width: 100%;
+}
+
+
+/*----daltonico----*/
+.menud {
+  background-color: #252B2F;
+}
+
+body.daltonico {
+  background-color: #404C52  ;
+}
+
+button.daltonico {
+  background-color: #007A84 ;
+  color: #ffffff;
+  border: 1px solid #007A84  ;
+
+}
+button:focus.daltonico {
+  background-color: #009FAB;
+}
+
+button:hover.daltonico {
+  background-color: #009FAB;
+}
+
+/*----RANKING----*/
+.containter4 {
+  width: 10%;
+}
+
+.ranking {
+  margin-top: 1rem;
+  width: 80%;
+}
+
+.rankingth {
+  background-color: #ffffff;
+  color: #2774A6;
+  width: auto;
+  height: auto;
+  text-align: center;
+  border-color: #2774A6;
+}
+
+.rankingtd {
+  width: auto;
+  height: auto;
+  text-align: center;
+  border-color: #2774A6;
+}
+
+
+@media only screen and (max-width:1920px) {
+  /*----GAME---*/
+
+  td, th {
+    height: 90px;
+    width: 90px;
+  }
+}
+
+@media only screen and (max-width:1366px) {
+  /*----INDEX----*/
+
+  .descripcion {
+    width: 80%;
+  }
+
+  .container1 {
+    width: 10%;
+  }
+
+  .container2 {
+    width: 10%;
+  }
+  .instrucciones {
+    width: 75%;
+  }
+  .container3 {
+    width: 10%;
+  }
+
+  /*----GAME---*/
+
+  td, th {
+    height: 85px;
+    width: 85px;
+  }
+
+}
+
+@media only screen and (max-width:1024px) {
+    /*----INDEX----*/
+
+  .descripcion {
+    width: 100%;
+  }
+  
+  .container1 {
+    width: 0%;
+  }
+
+  .container2 {
+    width: 0%;
+  }
+
+  .container3 {
+    width: 0%;
+  }
+
+  .instrucciones {
+    width: 100%;
+  }
+
+    /*----GAME---*/
+
+    td, th {
+      height: 80px;
+      width: 80px;
+    }
+  
+  }
+
+  @media only screen and (max-width:800px) {
+    /*----GAME---*/
+
+    td, th {
+      height: 50px;
+      width: 50px;
+    }
+  
+  }
+
+  @media only screen and (max-width:680px) {
+    td, th {
+      height: 40px;
+      width: 40px;
+    }
+    .icon{
+      margin-left: auto;
+    }
+  }
+
+  @media only screen and (max-width:480px) {
+    td, th {
+      height: 30px;
+      width: 30px;
+    }
+    .flexboton {
+      display: block;
+    }
+
+    .botones {
+      margin-top: 2rem;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .icon{
+      margin-left: auto;
+    }
+
+    .button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+      margin-left: 0.5rem;
+    }
+  }
+
+  @media only screen and (max-width:430px) {
+    .icon {
+      width: 0px;
+    }
+  }
+
+  @media only screen and (max-width:375px) {
+
+  }

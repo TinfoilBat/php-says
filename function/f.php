@@ -48,3 +48,23 @@ function calculatePoints($timeSpent, $tries, $level) {
 
 	return $points;
 }
+// Devulve un array de arrays, cada array que esta dentro del array grande tiene en una posicion el usuario y en la otra los puntos
+function readFileRanking() {
+	$file = file(dirname(__DIR__).'/config/ranking.txt');
+	$alluser = [];
+	foreach($file as $linea) {
+		$userPoints = explode("\r\n", $linea);
+		$up = explode(";", $linea);
+		array_push($alluser, $up);
+	}
+	return $alluser;
+}
+// Genera la tabla a traves del fichero de configuracion (funcion readFileRanking())
+function generateRanking() {
+	for ($i = 0; $i < sizeof(readFileRanking()); $i++) {
+		echo '<tr>';
+		echo '<td class="rankingtd">' . readFileRanking()[$i][0] . '</td>';
+		echo '<td class="rankingtd">' . readFileRanking()[$i][1] . '</td>';
+		echo '</tr>';
+	}
+}

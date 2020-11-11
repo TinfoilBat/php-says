@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style><?php include_once(dirname(__DIR__).'/styles/style.css');?></style> 
-	<title>JUEGO</title>
+	<title>Memory-Game</title>
+	<link rel = "icon" href =  "../static/icon.png" type = "image/x-icon">
 	<script src="../function/f.js"></script>
-
 	<script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -54,11 +54,16 @@
 	<script type="text/javascript">
 		let seconds = <?php echo json_encode($segundos, JSON_HEX_TAG); ?>;
 	</script>
+	
+	<br>
+	<!-- Cierra el div con clase game -->
+	</div>
+
 </body>
 <footer>
 	<?php
 	include(dirname(__DIR__).'/common/game_buttons.php');
 	?>
 </footer>
-
+</center>
 </html>
