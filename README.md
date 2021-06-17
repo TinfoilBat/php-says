@@ -1,5 +1,5 @@
 # PHP-says
-A "Simon Says" type of game for class practice.
+A "Memory" type of game for class practice.
 
 Displays different colored cells briefly, and then they have to be guessed. Multiple levels of difficulty, and checkpoints to continue from the last level you reached.
 
